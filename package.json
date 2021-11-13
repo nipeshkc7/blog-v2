@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-starter-ghost",
+  "name": "blog-v2",
   "version": "1.0.0",
-  "description": "A starter template to build websites with Ghost & Eleventy",
+  "description": "Personal Blog Version 2",
   "main": ".eleventy.js",
   "scripts": {
     "start": "yarn run dev",
@@ -12,23 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TryGhost/eleventy-starter-ghost.git"
+    "url": "git+https://github.com/nipeshkc7/blog-v2"
   },
   "keywords": [
     "eleventy",
     "ghost",
-    "starter",
-    "boilerplate",
     "static",
     "site",
     "jamstack"
   ],
-  "author": "David Darnes",
+  "author": "Arpan Kc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TryGhost/eleventy-starter-ghost/issues"
+    "url": "https://github.com/nipeshkc7/blog-v2/issues"
   },
-  "homepage": "https://github.com/TryGhost/eleventy-starter-ghost#readme",
+  "homepage": "https://github.com/nipeshkc7/blog-v2#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
