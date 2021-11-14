@@ -1,4 +1,5 @@
 # Blog V2 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/59dc1d51-a011-4edb-9b7a-89f0b8530b28/deploy-status)](https://app.netlify.com/sites/arpansblogv2/deploys)
 
 Version 2 of my personal blog based on the Eleventy starter template
 
