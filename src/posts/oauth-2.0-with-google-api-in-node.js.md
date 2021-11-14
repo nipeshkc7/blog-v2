@@ -8,6 +8,7 @@ date: 2020-08-16T14:00:00Z
 tags:
 - blog
 layout: layouts/post.njk
+feature_image: img/google.png
 
 ---
 With all the asyncs and the chainings and all the other JS shamaladingdongs , doing even simple tasks in Javascript can feel overwhelming, at least for a beginner like me.

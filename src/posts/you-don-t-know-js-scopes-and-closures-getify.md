@@ -5,6 +5,7 @@ date: 2020-10-11T13:00:00Z
 tags:
 - bookclub
 layout: layouts/post.njk
+feature_image: img/you-dont-know-js.png
 
 ---
 ### 👩‍💻👩‍💻 You Don't Know JS : Scopes & Closures🔒🎉 ➡ 1 (Intro)

@@ -5,6 +5,7 @@ date: 2021-08-28T14:00:00Z
 tags:
 - blog
 layout: layouts/post.njk
+feature_image: img/podcast.jpeg
 
 ---
 This is a list of podcasts that I listen to every day, sorted by genre:

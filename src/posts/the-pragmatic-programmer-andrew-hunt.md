@@ -5,6 +5,7 @@ date: 2020-10-03T14:00:00.000+00:00
 tags:
 - bookclub
 layout: layouts/post.njk
+feature_image: img/pragmatic.png
 
 ---
 These are some of the important topics and highlights that stood out to me from `The Pragmatic Programmer`
