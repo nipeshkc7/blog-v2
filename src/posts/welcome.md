@@ -8,7 +8,7 @@ layout: layouts/post.njk
 feature_image: img/welcome.jpeg 
 
 ---
-Welcome world, to my first Static site generated page, built with Luv + Eleventy.
+Welcome world, to my first Static site generated page, built with Eleventy.
 
 ## What to expect?
 
