@@ -5,7 +5,7 @@ date: 2020-08-10
 tags:
 - misc
 layout: layouts/post.njk
-feature_image: img/welcome.png 
+feature_image: img/welcome.jpeg 
 
 ---
 Welcome world, to my first Static site generated page, built with Luv + Eleventy.

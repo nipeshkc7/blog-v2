@@ -1,14 +1,14 @@
 {% extends 'layouts/default.njk' %}
 
-{% set title = doc.title %}
+{% set title = doc.data.title %}
 {% set codeinjection_head = doc.codeinjection_head %}
 {% set codeinjection_foot = doc.codeinjection_foot %}
 
 {% block content %}
     <article class="content">
-        {% if doc.feature_image %}
+        {% if doc.data.feature_image %}
             <figure class="post-feature-image">
-                <img src="{{ doc.feature_image }}" alt="{{ title }}">
+                <img src="{{ doc.data.feature_image }}" alt="{{ title }}">
             </figure>
         {% endif %}
         <section class="post-full-content">
