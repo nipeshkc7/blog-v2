@@ -89,7 +89,16 @@ module.exports = function(config) {
 
   // Get all posts
   config.addCollection("posts", async function(collection) {
-    return collection.getFilteredByGlob("src/posts/*.md");
+    collection = collection.getFilteredByGlob("src/posts/*.md");
+    collection.forEach(post => {
+      post.primary_author = {};
+      post.primary_author.name = "Arpan KC";
+      post.primary_author.url = "https://www.arpankc.com";
+      if(!post.data.feature_image) {
+        post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
+      }
+    })
+    return collection;
     // collection = await api.posts
     //   .browse({
     //     include: "tags,authors",
