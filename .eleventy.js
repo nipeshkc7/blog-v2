@@ -22,6 +22,8 @@ const stripDomain = url => {
 };
 
 module.exports = function(config) {
+
+  config.addPassthroughCopy("src/img");
   // Minify HTML
   config.addTransform("htmlmin", htmlMinTransform);
 
