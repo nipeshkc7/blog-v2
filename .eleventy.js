@@ -88,28 +88,28 @@ module.exports = function(config) {
   // Get all posts
   config.addCollection("posts", async function(collection) {
     return collection.getFilteredByGlob("src/posts/*.md");
-    collection = await api.posts
-      .browse({
-        include: "tags,authors",
-        limit: "all"
-      })
-      .catch(err => {
-        console.error(err);
-      });
+    // collection = await api.posts
+    //   .browse({
+    //     include: "tags,authors",
+    //     limit: "all"
+    //   })
+    //   .catch(err => {
+    //     console.error(err);
+    //   });
 
-    collection.forEach(post => {
-      post.url = stripDomain(post.url);
-      post.primary_author.url = stripDomain(post.primary_author.url);
-      post.tags.map(tag => (tag.url = stripDomain(tag.url)));
+    // collection.forEach(post => {
+    //   post.url = stripDomain(post.url);
+    //   post.primary_author.url = stripDomain(post.primary_author.url);
+    //   post.tags.map(tag => (tag.url = stripDomain(tag.url)));
 
-      // Convert publish date into a Date object
-      post.published_at = new Date(post.published_at);
-    });
+    //   // Convert publish date into a Date object
+    //   post.published_at = new Date(post.published_at);
+    // });
 
-    // Bring featured post to the top of the list
-    collection.sort((post, nextPost) => nextPost.featured - post.featured);
+    // // Bring featured post to the top of the list
+    // collection.sort((post, nextPost) => nextPost.featured - post.featured);
 
-    return collection;
+    // return collection;
   });
 
   // Get all authors
