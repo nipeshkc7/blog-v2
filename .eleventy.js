@@ -87,6 +87,7 @@ module.exports = function(config) {
 
   // Get all posts
   config.addCollection("posts", async function(collection) {
+    return collection.getFilteredByGlob("src/posts/*.md");
     collection = await api.posts
       .browse({
         include: "tags,authors",
