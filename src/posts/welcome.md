@@ -5,10 +5,10 @@ date: 2020-08-10
 tags:
 - misc
 layout: layouts/post.njk
-feature_image: img/welcome.jpeg 
+feature_image: img/welcome.jpeg
 
 ---
-Welcome world, to my first Static site generated page, built with Eleventy.
+Welcome world, to my second Static site generated page, built with Eleventy.
 
 ## What to expect?
 
