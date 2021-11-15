@@ -6,6 +6,7 @@ const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const localImages = require("eleventy-plugin-local-images");
 const lazyImages = require("eleventy-plugin-lazyimages");
 const ghostContentAPI = require("@tryghost/content-api");
+const { appendDefaultAuthor } = require("./utils")
 
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 
@@ -121,6 +122,20 @@ module.exports = function(config) {
     // collection.sort((post, nextPost) => nextPost.featured - post.featured);
 
     // return collection;
+  });
+
+  config.addCollection("dev-logs", async function(collection) {
+    collection = collection.getFilteredByGlob("src/dev-logs/*.md");
+    collection.forEach(post => {
+       post.primary_author = {};
+       post.primary_author.name = "Arpan";
+       post.primary_author.url = "https://www.arpankc.com";
+
+      if(!post.data.feature_image) {
+        post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
+      }
+    })
+    return collection;
   });
 
   // Get all authors
