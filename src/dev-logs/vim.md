@@ -5,6 +5,7 @@ date: 2020-08-10T14:00:00.000+00:00
 tags:
 - devlogs
 layout: layouts/post.njk
+feature_image: /img/vim-banner.png
 
 ---
 Some Vim tips to get you up and running using VIM.

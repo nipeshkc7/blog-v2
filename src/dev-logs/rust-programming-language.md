@@ -5,6 +5,7 @@ date: 2021-08-28T14:00:00Z
 tags:
 - devlogs
 layout: layouts/post.njk
+feature_image: img/rust.jpeg
 
 ---
 Rust \[[https://doc.rust-lang.org/rust-by-example/index.html](https://doc.rust-lang.org/rust-by-example/index.html "https://doc.rust-lang.org/rust-by-example/index.html")\] is a C-style language built to be efficient and has its own custom approach to garbage collection. It has similarities with C with the use of pointers and adds some modern flavoring for a better Development experience. It introduces new concepts like Ownership.

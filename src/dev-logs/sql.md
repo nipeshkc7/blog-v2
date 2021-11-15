@@ -5,6 +5,7 @@ date: 2020-09-28T15:00:00Z
 tags:
 - devlogs
 layout: layouts/post.njk
+feature_image: img/sql.jpeg
 
 ---
 ## Tips about SQL
