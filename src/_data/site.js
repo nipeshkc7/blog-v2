@@ -17,6 +17,7 @@ module.exports = async function() {
         },
         { label: 'Home', url: '/' },
         { label: 'Tag', url: '/tag/getting-started/' },
+        { label: 'Dev Logs', url: '/dev-logs/' },
         { label: 'Author', url: '/author/ghost/' },
         { label: 'Help', url: 'https://docs.ghost.org' }
       ],
