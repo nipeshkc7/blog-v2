@@ -8,8 +8,11 @@ module.exports = async function () {
     logo: 'https://arpankc.com/img/download.png',
     icon: 'https://arpankc.com/img/icon.png',
     cover_image: 'https://static.ghost.org/v1.0.0/images/blog-cover.jpg',
-    facebook: 'ghost',
-    twitter: '@ghost',
+    twitter: '@nipeshkc7',
+    stack_overflow: "users/6470513/arpan-kc",
+    github: "nipeshkc7",
+    dev: "nipeshkc7",
+    medium: "@arpankc",
     navigation: [
       { label: 'Home', url: '/' },
       { label: 'Dev Logs', url: '/dev-logs/' },
