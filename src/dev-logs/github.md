@@ -5,6 +5,7 @@ date: 2020-08-10T14:00:00.000+00:00
 tags:
 - devlogs
 layout: layouts/post.njk
+feature_image: img/git.jpeg
 
 ---
 This is a collection of important notes gathered throughout working on various projects and contributing to Open-Source repositories.

@@ -5,6 +5,7 @@ date: 2020-08-11T14:00:00Z
 tags:
 - devlogs
 layout: layouts/post.njk
+feature_image: img/html.jpeg
 
 ---
 ### CSS Handy tips

@@ -5,6 +5,7 @@ date: 2020-08-14T14:00:00Z
 tags:
 - devlogs
 layout: layouts/post.njk
+feature_image: img/oauth.webp
 
 ---
 ### Facebook login
