@@ -6,7 +6,6 @@ const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const localImages = require("eleventy-plugin-local-images");
 const lazyImages = require("eleventy-plugin-lazyimages");
 const ghostContentAPI = require("@tryghost/content-api");
-const { appendDefaultAuthor } = require("./utils")
 
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 
@@ -17,12 +16,29 @@ const api = new ghostContentAPI({
   version: "v2"
 });
 
+// Default Author Info
+const author = {
+  name: "Arpan Kc",
+  url: "https://www.arpankc.com"
+}
+
+const BASE_URL = process.env.ELEVENTY_ENV === "prod" ? "https://blog.arpankc.com" : "http://localhost:8080";
+
 // Strip Ghost domain from urls
 const stripDomain = url => {
   return url.replace(process.env.GHOST_API_URL, "");
 };
 
-module.exports = function(config) {
+const fixImage = post => {
+  if (!post.data.feature_image) {
+    post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
+  } else {
+    post.data.feature_image = `${BASE_URL}/${post.data.feature_image}`
+  }
+  return post
+}
+
+module.exports = function (config) {
 
   config.addPassthroughCopy("src/img");
   // Minify HTML
@@ -66,7 +82,7 @@ module.exports = function(config) {
 
   // Get all pages, called 'docs' to prevent
   // conflicting the eleventy page object
-  config.addCollection("docs", async function(collection) {
+  config.addCollection("docs", async function (collection) {
     collection = await api.pages
       .browse({
         include: "authors",
@@ -89,14 +105,14 @@ module.exports = function(config) {
   });
 
   // Get all posts
-  config.addCollection("posts", async function(collection) {
+  config.addCollection("posts", async function (collection) {
     collection = collection.getFilteredByGlob("src/posts/*.md");
     collection.forEach(post => {
-      post.primary_author = {};
-      post.primary_author.name = "Arpan KC";
-      post.primary_author.url = "https://www.arpankc.com";
-      if(!post.data.feature_image) {
+      post.primary_author = { ...author };
+      if (!post.data.feature_image) {
         post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
+      } else {
+        post.data.feature_image = `${BASE_URL}/${post.data.feature_image}`
       }
     })
     return collection;
@@ -124,22 +140,22 @@ module.exports = function(config) {
     // return collection;
   });
 
-  config.addCollection("dev-logs", async function(collection) {
+  // Get all dev logs
+  config.addCollection("dev-logs", async function (collection) {
     collection = collection.getFilteredByGlob("src/dev-logs/*.md");
     collection.forEach(post => {
-       post.primary_author = {};
-       post.primary_author.name = "Arpan";
-       post.primary_author.url = "https://www.arpankc.com";
-
-      if(!post.data.feature_image) {
+      post.primary_author = { ...author };
+      if (!post.data.feature_image) {
         post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
+      } else {
+        post.data.feature_image = `${BASE_URL}/${post.data.feature_image}`
       }
     })
     return collection;
   });
 
   // Get all authors
-  config.addCollection("authors", async function(collection) {
+  config.addCollection("authors", async function (collection) {
     collection = await api.authors
       .browse({
         limit: "all"
@@ -173,7 +189,7 @@ module.exports = function(config) {
   });
 
   // Get all tags
-  config.addCollection("tags", async function(collection) {
+  config.addCollection("tags", async function (collection) {
     collection = await api.tags
       .browse({
         include: "count.posts",
