@@ -8,7 +8,7 @@ layout: layouts/post.njk
 feature_image: img/you-dont-know-js.png
 
 ---
-### You Don't Know JS : Scopes & Closures ➡ 1 (Intro)
+### You Don't Know JS: Scopes & Closures ➡ 1 (Intro)
 
 **Compilation** is a process that consists of three different steps:
 
@@ -22,13 +22,9 @@ feature_image: img/you-dont-know-js.png
 
 \- with() keyword is also bad
 
-\- Scopes determined at compilation, Use the bucket and marble 🥃🎱 metaphor to match a variable with a scope. (same color marbles go in same color buckets)
+\- Scopes determined at compilation, Use the bucket and marble 🥃🎱 metaphor to match a variable with a scope. (same color marbles go in same color buckets
 
-![](https://keep.google.com/u/0/media/v2/1KgxxWuNsUxUchJ9uLHoSTYcrLx2rfuFk8qSZC_khQzIPQJQJd8ccDf2m-AyHKXg/1gEwbTVVrohitdcgvSQOky4k7fA2xDfhctdF4VWglXyVhc8MrWf8uppf2WXiJewU?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=1180)
-
-![](https://keep.google.com/u/0/media/v2/1KgxxWuNsUxUchJ9uLHoSTYcrLx2rfuFk8qSZC_khQzIPQJQJd8ccDf2m-AyHKXg/1OMbB6Ya6U8K0Mv82ip40MjnPEHpASUC3R186dN9EfiXE7G2QdrkbWq648B_V7g?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=822)
-
-![](https://keep.google.com/u/0/media/v2/1KgxxWuNsUxUchJ9uLHoSTYcrLx2rfuFk8qSZC_khQzIPQJQJd8ccDf2m-AyHKXg/1eLJvVFrbO-IiAHyQ1Lp0UgiMEe5lyJgOhBqMNoTikSewpy0QiKopbMfGt4J2KEM?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=840)
+![](/img/unnamed.png)
 
 ### 👩‍💻👩‍💻 You Don't Know JS : Scopes & Closures🔒🎉 ➡ 2 (Engine, Compiler and Scope manager)
 
