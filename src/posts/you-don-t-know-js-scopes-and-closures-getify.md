@@ -8,7 +8,7 @@ layout: layouts/post.njk
 feature_image: img/you-dont-know-js.png
 
 ---
-### You Don't Know JS: Scopes & Closures ➡ 1 (Intro)
+### You Don't Know JS: Scopes & Closures Part 1 (Intro)
 
 **Compilation** is a process that consists of three different steps:
 
