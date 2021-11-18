@@ -29,15 +29,6 @@ const stripDomain = url => {
   return url.replace(process.env.GHOST_API_URL, "");
 };
 
-const fixImage = post => {
-  if (!post.data.feature_image) {
-    post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
-  } else {
-    post.data.feature_image = `${BASE_URL}/${post.data.feature_image}`
-  }
-  return post
-}
-
 module.exports = function (config) {
 
   config.addPassthroughCopy("src/img");
