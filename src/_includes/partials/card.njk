@@ -28,7 +28,7 @@
                 <span>{{ post.primary_author.name }}</span>
             </div>
             <div class="post-card-footer-right">
-                <div>{{ post.html | safe | getReadingTime }} min read</div>
+                <div>{{ post.template.inputContent | safe | getReadingTime }} min read</div>
             </div>
         </footer>
     </a>
