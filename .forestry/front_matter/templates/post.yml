@@ -20,3 +20,5 @@ fields:
 - type: file
   name: feature_image
   label: feature_image
+pages:
+- src/posts/working-with-users-and-groups-in-linux.md
