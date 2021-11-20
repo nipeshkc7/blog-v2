@@ -1,5 +1,5 @@
 ---
-title: Working with Users and Groups in Linux
+title: Working with Users, Groups and Permissions in Linux
 description: A quick guide to working with users and groups in linux
 date: 2021-11-19T13:00:00Z
 tags:
@@ -19,3 +19,9 @@ By default, a system has a `root` user which has complete permission over the sy
 To log in as the new user, a password must be set up. To do that, use the command
 
     sudo passwd new-user
+
+[This blog post]() does a great job of going in-depth about the user creation process.
+
+## Groups
+
+Groups are a
