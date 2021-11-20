@@ -5,7 +5,7 @@ date: 2021-11-19T13:00:00Z
 tags:
 - blog
 layout: layouts/post.njk
-feature_image: ''
+feature_image: "/img/jpeg"
 
 ---
 This is a quick guide to show you how to work with Users and Groups in Linux. Concepts will be similar across most distros as well on Macbooks.
