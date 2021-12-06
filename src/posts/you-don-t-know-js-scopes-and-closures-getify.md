@@ -40,7 +40,7 @@ The Engine handles compilation to execution(start to finish), Compiler: Handles 
 2. Conversion to Abstract Syntax Tree (AST)
 3. And finally the conversion to machine code. 
 
-, Scope manager 👨🏻‍💼: Keeps track of variables and scopes
+The Scope manager 👨🏻‍💼: Keeps track of variables and scopes
 
 \- What happens when var studentArray = \[ ... \] //initialization
 
