@@ -32,9 +32,15 @@ Targets are identifier/names, sources are the values. There are many different w
 
  Scopes determined at compilation, Use the bucket and marble metaphor to match a variable with a scope. (same color marbles go in same color buckets)
 
-### Engine, Compiler and Scope manager
+### Engine, Compiler, and Scope manager
 
-\- Engine🚂 : handles compilation to execution(start to finish), Compiler: 📄 Handles compilation(tokenization ⏭ AST ⏭ machine code), Scope manager 👨🏻‍💼: Keeps track of variables and scopes
+The Engine handles compilation to execution(start to finish), Compiler: Handles compilation which consists of three steps:
+
+1. Tokenization
+2. Conversion to Abstract Syntax Tree (AST)
+3. And finally the conversion to machine code. 
+
+, Scope manager 👨🏻‍💼: Keeps track of variables and scopes
 
 \- What happens when var studentArray = \[ ... \] //initialization
 
