@@ -22,12 +22,11 @@ Targets are identifier/names, sources are the values. There are many different w
 
 ### Some Helpful Tips
 
-* Never use `eval()` since it can mess with the scope already established at runtime, and the program can also takes a performance hit. For example
-*  with() keyword is also bad
+* Never use `eval()` since it can mess with the scope already established at runtime, and the program can also takes a performance hit. For example,  
+  ![](/img/unnamed.png)
+*  `with()` keyword is also bad
 
 \- Scopes determined at compilation, Use the bucket and marble 🥃🎱 metaphor to match a variable with a scope. (same color marbles go in same color buckets
-
-![](/img/unnamed.png)
 
 ### 👩‍💻👩‍💻 You Don't Know JS : Scopes & Closures🔒🎉 ➡ 2 (Engine, Compiler and Scope manager)
 
