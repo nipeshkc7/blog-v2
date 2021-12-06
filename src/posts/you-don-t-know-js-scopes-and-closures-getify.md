@@ -26,7 +26,9 @@ Targets are identifier/names, sources are the values. There are many different w
   ![](/img/unnamed.png)
 *  `with()` keyword is also bad
 
-\- Scopes determined at compilation, Use the bucket and marble 🥃🎱 metaphor to match a variable with a scope. (same color marbles go in same color buckets
+### Determining scopes
+
+ Scopes determined at compilation, Use the bucket and marble metaphor to match a variable with a scope. (same color marbles go in same color buckets)
 
 ### 👩‍💻👩‍💻 You Don't Know JS : Scopes & Closures🔒🎉 ➡ 2 (Engine, Compiler and Scope manager)
 
