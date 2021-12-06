@@ -16,11 +16,14 @@ feature_image: img/you-dont-know-js.png
 2. Parsing: Converting tokens into an Abstract Syntax Tree.
 3. Code Generation: Converting Abstract Syntax Tree to machine code.
 
-\- Targets vs sources 🎯🥧, targets are identifier/names🎯, sources🥧 are the values, many different ways of target to value assertion, eg function getStudentName(..) , where getStudentName🎯 is a target and function(..) 🥧is a source .
+### **Targets vs sources** 
 
-\- NEVER USE eval() 👎🏻🚫 => can mess with the scope ➿ already established at runtime, and also takes a performance hit. For example
+Targets are identifier/names, sources are the values. There are many different ways for target to value assertion, For example `function getStudentName(..)` , where getStudentName is a target and `function(..)` is a source .
 
-\- with() keyword is also bad
+### Some Helpful Tips
+
+* Never use `eval()` since it can mess with the scope already established at runtime, and the program can also takes a performance hit. For example
+*  with() keyword is also bad
 
 \- Scopes determined at compilation, Use the bucket and marble 🥃🎱 metaphor to match a variable with a scope. (same color marbles go in same color buckets
 
