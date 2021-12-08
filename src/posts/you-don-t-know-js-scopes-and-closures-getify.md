@@ -50,6 +50,12 @@ The Engine handles compilation to execution(start to finish), Compiler: Handles 
 2. (During runtime) Engine asks  scope manager if `studentArray` is variable, says yes then Engine initializes it to undefined so it is ready to use, and then assigns the array value to it.
 
 * When the JS engine comes across a variable, asks current scope for value, if not, it asks the outer scope, and so on...
-*  `var` temporarily sets to undefined,(unlike let/const which sets it uninitialized / TDZ ).
-*  Says reference error if source lookup fails (get(x)) or target(x=2 where x has not been declared) lookup fails (in strict mode)
-*  Variable scopes are usually determined at compilation before runtime unless a variable cannot be found in the current file (exists in a different file). In that case, it is resolved at runtime( when it finds it in a different file) (resolved to global scope usually)
+* `var` temporarily sets to undefined,(unlike let/const which sets it uninitialized / TDZ ).
+* Says reference error if source lookup fails (get(x)) or target(x=2 where x has not been declared) lookup fails (in strict mode)
+* Variable scopes are usually determined at compilation before runtime unless a variable cannot be found in the current file (exists in a different file). In that case, it is resolved at runtime( when it finds it in a different file) (resolved to global scope usually)
+
+### Shadowing
+
+This means the global variable is masked since lookup happens from inner to outer.
+
+![](/img/shadowing.png)
