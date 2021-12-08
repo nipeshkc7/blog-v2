@@ -59,3 +59,7 @@ The Engine handles compilation to execution(start to finish), Compiler: Handles 
 This means the global variable is masked since lookup happens from inner to outer.
 
 ![](/img/shadowing.png)
+
+### When not in strict mode.
+
+![](/img/no-strict-mode.png)
