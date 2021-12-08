@@ -18,7 +18,7 @@ feature_image: img/you-dont-know-js.png
 2. Parsing: Converting tokens into an Abstract Syntax Tree.
 3. Code Generation: Converting Abstract Syntax Tree to machine code.
 
-### Targets vs sources 
+### Targets vs sources
 
 Targets are identifiers/names, sources are the values. There are many different ways for target to value assertion, For example `function getStudentName(..)` , where getStudentName is a target and `function(..)` is a source.
 
@@ -26,11 +26,11 @@ Targets are identifiers/names, sources are the values. There are many different 
 
 * Never use `eval()` since it can mess with the scope already established at runtime, and the program can also takes a performance hit. For example,  
   ![](/img/unnamed.png)
-*  `with()` keyword is also bad
+* `with()` keyword is also bad
 
 ### Determining scopes
 
- Scopes determined at compilation, Use the bucket and marble metaphor to match a variable with a scope. (same color marbles go in same color buckets)
+Scopes determined at compilation, Use the bucket and marble metaphor to match a variable with a scope. (same color marbles go in same color buckets)
 
 ### Engine, Compiler, and Scope manager
 
@@ -38,18 +38,19 @@ The Engine handles compilation to execution(start to finish), Compiler: Handles 
 
 1. Tokenization
 2. Conversion to Abstract Syntax Tree (AST)
-3. And finally the conversion to machine code. 
+3. And finally the conversion to machine code.
 
-The Scope manager 👨🏻‍💼: Keeps track of variables and scopes
+**Scope Manager** : Keeps track of variables and scopes
 
-\- What happens when var studentArray = \[ ... \] //initialization
+**_Question_**: What happens here:
 
-1. (During compilation 📄💨) Compiler asks ❓ if scope manager has a studentArray declaration, if not declares it
-2. (During runtime) Engine asks ❓ scope manager if studentArray is variable, says yes then Engine initializes it to undefined so its ready to use 🏁 , and then assigns the array value to it.
+    var studentArray = [ ... ] //initialization
 
-\- When JS engine comes across a variable, asks current scope for value, if not , it asks the outer scope, and so on...
+1. (During compilation ) Compiler asks if scope manager has a studentArray declaration, if not declares it
+2. (During runtime) Engine asks  scope manager if `studentArray` is variable, says yes then Engine initializes it to undefined so it is ready to use, and then assigns the array value to it.
 
-\- 'var' temporarily sets to undefined,(unlike let/const which sets it uninitialized / TDZ 🔪)
+* When JS engine comes across a variable, asks current scope for value, if not , it asks the outer scope, and so on...
+*  `var` temporarily sets to undefined,(unlike let/const which sets it uninitialized / TDZ 🔪)
 
 \- Says reference error 🤯 if source lookup fails (get(x)) or target(x=2 where x has not been declared)lookup fails(in strict mode)
 
