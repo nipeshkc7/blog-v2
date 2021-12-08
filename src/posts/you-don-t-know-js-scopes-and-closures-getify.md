@@ -53,7 +53,3 @@ The Engine handles compilation to execution(start to finish), Compiler: Handles 
 *  `var` temporarily sets to undefined,(unlike let/const which sets it uninitialized / TDZ ).
 *  Says reference error if source lookup fails (get(x)) or target(x=2 where x has not been declared) lookup fails (in strict mode)
 *  Variable scopes are usually determined at compilation before runtime unless a variable cannot be found in the current file (exists in a different file). In that case, it is resolved at runtime( when it finds it in a different file) (resolved to global scope usually)
-
-![](https://keep.google.com/u/0/media/v2/16P__GInVbbaNKlDjjf-k4aW8ARWC1OyeeCXXRO-v5leSX3sAMzEHP7dU_LFqvkk/1iVr3WuBG3gxpeja8sQv7ACeSfXjyvz6Qea4-xEjYlr4te9VQ6lFIdJU6O0ryiw?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=1126)
-
-![](https://keep.google.com/u/0/media/v2/16P__GInVbbaNKlDjjf-k4aW8ARWC1OyeeCXXRO-v5leSX3sAMzEHP7dU_LFqvkk/1Bvu2z0tFGV6TsUjXvb44SuRXkT8sXujIeRYErklZTvzGrh_zl58gCEx2ikYM-g?accept=image/gif,image/jpeg,image/jpg,image/png,image/webp,audio/aac&sz=1044)
