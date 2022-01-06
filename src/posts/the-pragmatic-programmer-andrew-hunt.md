@@ -24,7 +24,7 @@ You may need to spend a week or so deliberately asking yourself "did the thing I
 
 ### Topic 9. DRY- The Evils of Duplication
 
-DRY is about the duplication of knowledge, of intent. It's about expressing the same thing in two different places, possibly in two different ways.
+DRY is about the duplication of knowledge, of intent. It's about expressing the same thing in two different places, possibly in two different ways. A common misconception is that DRY refers to only the duplication of code, however, that is inaccurate.
 
 Here's an acid test: when some single facet of the code has to change, do you find yourself making the change in multiple places, and in multiple different formats? Do you have to change code and documentation, or a database schema and a structure that holds it, or...? If so, your code isn't DRY.
 
