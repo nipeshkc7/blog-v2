@@ -12,7 +12,7 @@ feature_image: img/you-dont-know-js.png
 
 ### Compilation
 
-**Compilation** is a process that consists of three different steps:
+**Compilation** in javascript is a process that consists of three different steps:
 
 1. Tokenizing: Converting characters to chunks called tokens.
 2. Parsing: Converting tokens into an Abstract Syntax Tree.
