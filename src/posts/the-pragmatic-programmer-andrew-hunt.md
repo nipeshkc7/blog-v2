@@ -12,11 +12,11 @@ These are some of the important topics and highlights that stood out to me from 
 
 ### Topic 3. Software Entropy:
 
-_"Broken window theory"_: The point where everything in a building starts deteriorating is a broken window. So if you see a broken window (in our case, code smells), fix it immediately. 
+_"Broken window theory"_: The point where everything in a building starts deteriorating is a broken window. So if you see a broken window (in our case, code smells), fix it immediately.
 
 ### Topic 5. Good-Enough Software
 
-Surprisingly, many users would rather use software with some rough edges today, than wait for fancy bells and whistles a year from now.
+Surprisingly, many users would rather use software with some rough edges today, than wait for fancy bells and whistles a year from now. So it's important to understand when software is good enough to ship.
 
 ### Topic 8. The Essence of Good Design
 
