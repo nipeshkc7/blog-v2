@@ -57,4 +57,4 @@ It's important to specify what a function will do beforehand, also specifying th
 
 ### Topic 24. Dead Programs Tell No Lies
 
-* No point in reraising exceptions.
+There's no point in reraising exceptions. We've all been there throwing and recatching, but for what? Unless absolutely necessary an error can be thrown at a single place.
