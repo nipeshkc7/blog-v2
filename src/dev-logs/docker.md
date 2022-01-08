@@ -37,8 +37,25 @@ Dockerfile specifies the actual image whereas docker-compose will help run multi
 
 Alternatively, you can run the docker image directly by using something like `docker run --publish 8080:8080 <container-id>`
 
+### Doing a clean restart for a docker instance
+
+**Warning:** This will wipe out any existing data inside volumes.
+
+1. Stop the container(s) using the following command:
+
+       docker-compose down
+2. Delete all containers using the following command:
+
+       docker rm -f $(docker ps -a -q)
+3. Delete all volumes using the following command:
+
+       docker volume rm $(docker volume ls -q)
+4. Restart the containers using the following command:
+
+       docker-compose up -d
+
 ### Use alpine where possible
 
-Alpine ( [https://hub.docker.com/_/alpine](https://hub.docker.com/_/alpine "https://hub.docker.com/_/alpine") ) is a tiny Linux distribution ideal for dockerizing/productionizing your applications. This is great for languages like NodeJS. 
+Alpine ( [https://hub.docker.com/_/alpine](https://hub.docker.com/_/alpine "https://hub.docker.com/_/alpine") ) is a tiny Linux distribution ideal for dockerizing/productionizing your applications. This is great for languages like NodeJS.
 
 However, I've had my own gotcha moment with alpine when trying to run a compiled Rust binary in an Alpine container after multi-stage builds. Sounds good on paper, but there's more to it, you would need some low-level wizardry and expertise to make a typical binary run on Alpine container (it's small for a reason) using, and even if you could get it to run, it wouldn't be worth it as it will be negatively impacting performance. More on this: [https://andygrove.io/2020/05/why-musl-extremely-slow/](https://andygrove.io/2020/05/why-musl-extremely-slow/ "https://andygrove.io/2020/05/why-musl-extremely-slow/")
