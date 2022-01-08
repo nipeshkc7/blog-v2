@@ -41,7 +41,7 @@ Alternatively, you can run the docker image directly by using something like `do
 
 **Warning:** This will wipe out any existing data inside volumes.
 
-1. Stop the container(s) using the following command:
+1. Stop the containers using the following command:
 
        docker-compose down
 2. Delete all containers using the following command:
