@@ -21,4 +21,5 @@ fields:
   name: feature_image
   label: feature_image
 pages:
+- src/dev-logs/Drafts/macos-automation-with-javascript.md
 - src/posts/working-with-users-and-groups-in-linux.md
