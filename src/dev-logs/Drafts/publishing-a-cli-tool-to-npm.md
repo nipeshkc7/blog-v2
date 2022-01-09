@@ -42,7 +42,7 @@ By the end, you should have a `package.json` file which should look something li
       "license": "ISC"
     }
 
-The above values are the defaults if not explicitly defined. I recommend filling out all the fields including `description`, `keywords` and `author`. Additionally, there are other fields, which although not necessary, are present in bigger projects like `bugs` which has the URL and email specifying where the issues should be reported. A complete list of all the fields and details can be found in the [npmjs docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json "npmjs docs"). 
+The above values are the defaults if not explicitly defined. I recommend filling out all the fields present above including `description`, `keywords` and `author`. This will give better clarity to your npm project. Additionally, there are other fields, which although not necessary, are present in bigger projects like `bugs` which has the URL and email specifying where the issues should be reported. A complete list of all the fields and details can be found in the [npmjs docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json "npmjs docs"). 
 
 ## Creating a command-line tool
 
