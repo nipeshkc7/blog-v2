@@ -22,4 +22,5 @@ fields:
   label: feature_image
 pages:
 - src/dev-logs/Drafts/macos-automation-with-javascript.md
+- src/dev-logs/Drafts/publishing-a-cli-tool-to-npm.md
 - src/posts/working-with-users-and-groups-in-linux.md
