@@ -95,3 +95,13 @@ Now that we have our npm tool up and running, the next step is to publish it. Th
 And there you have it, your package should be available at [https://www.npmjs.com/](https://www.npmjs.com/ "https://www.npmjs.com/").  
 
 ## Running your tool
+
+Now using `npx`, the npm package runner, you can run your code from ANYWHERE without having to globally install the packages by running:
+
+`npx <your package name>`
+
+<gif>
+
+And the cool thing is you `npx` comes with `npm` by default, so you don't need to worry about installing it separately.
+
+## Where to go from here?
