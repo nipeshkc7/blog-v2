@@ -83,8 +83,15 @@ Let's go through the code, the first line `#!/usr/bin/env node` is called a [she
 
 Then we'll use the `inquirer` package to get input from the user, currently, the input type is a question, but you can also have lists, checkboxes, and many more.
 
-Then we can get the user answers which for the purposes of this program, we'll append to the API request.
+Then we can get the user answers which for the purposes of this program, we'll append to the API request. Then we can use `console.log` to display the result back to the user.
 
 ## Publishing to npm
+
+Now that we have our npm tool up and running, the next step is to publish it. This can be achieved with two simple steps.
+
+1. Login to npm using `npm login` and follow the prompts.
+2. Run `npm publish`
+
+And there you have it, your package should be available at [https://www.npmjs.com/](https://www.npmjs.com/ "https://www.npmjs.com/").  
 
 ## Running your tool
