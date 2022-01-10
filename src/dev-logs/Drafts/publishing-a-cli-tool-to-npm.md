@@ -105,3 +105,10 @@ Now using `npx`, the npm package runner, you can run your code from ANYWHERE wit
 And the cool thing is you `npx` comes with `npm` by default, so you don't need to worry about installing it separately.
 
 ## Where to go from here?
+
+## Source code
+
+Here are the code and package used in this tutorial.
+
+* Source code: [https://github.com/nipeshkc7/npm-publish-demo](https://github.com/nipeshkc7/npm-publish-demo "https://github.com/nipeshkc7/npm-publish-demo") 
+* Package: [https://www.npmjs.com/package/npm-tool-8687](https://www.npmjs.com/package/npm-tool-8687 "https://www.npmjs.com/package/npm-tool-8687")
