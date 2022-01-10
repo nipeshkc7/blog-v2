@@ -50,6 +50,8 @@ We will be creating a simple command-line tool that prompts the user for a pokem
 
 In your `index.js` add the following code:
 
+    #!/usr/bin/env node
+    
     const inquirer = require('inquirer');
     const axios = require('axios');
     
