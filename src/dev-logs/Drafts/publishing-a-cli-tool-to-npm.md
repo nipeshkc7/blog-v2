@@ -37,6 +37,8 @@ By the end, you should have a `package.json` file which should look something li
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
       },
+
+    A
       "keywords": [],
       "author": "",
       "license": "ISC"
@@ -44,9 +46,13 @@ By the end, you should have a `package.json` file which should look something li
 
 The above values are the defaults if not explicitly defined. I recommend filling out all the fields present above including `description`, `keywords` and `author`. This will give better clarity to your npm project. Additionally, there are other fields, which although not necessary, are present in bigger projects like `bugs` which has the URL and email specifying where the issues should be reported. A complete list of all the fields and details can be found in the [npmjs docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json "npmjs docs").
 
+Additionally, you will want a `bin` property as well, we'll get into the why in the later parts of this article.
+
+    "bin": "./index.js"
+
 ## Creating a command-line tool
 
-We will be creating a simple command-line tool that prompts the user for a pokemon name and gets displays its types using the pokemon api. To get user prompts we'll be using Inquirer.js which lets you easily build beautiful command-line interfaces. 
+We will be creating a simple command-line tool that prompts the user for a pokemon name and displays its types using the pokemon API. To get user prompts we'll be using Inquirer.js which lets you easily build beautiful command-line interfaces.
 
 In your `index.js` add the following code:
 
@@ -72,7 +78,12 @@ In your `index.js` add the following code:
           console.log("Pokemon not found, try again");
         }
       })
-    
+
+Let's go through the code, the first line `#!/usr/bin/env node` is called a [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix) "shebang") line, which basically tells a Unix like system what executable to use to run the script, which in this case is `node`.
+
+Then we'll use the `inquirer` package to get input from the user, currently, the input type is a question, but you can also have lists, checkboxes, and many more.
+
+Then we can get the user answers which for the purposes of this program, we'll append to the API request.
 
 ## Publishing to npm
 
