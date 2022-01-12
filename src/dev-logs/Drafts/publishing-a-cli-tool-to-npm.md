@@ -60,6 +60,27 @@ Additionally, you will want a `bin` property as well, we'll get into the why in 
 
     "bin": "./index.js"
 
+In the end the `package.json` should look something like:
+
+    {
+      "name": "demo-npm-cli-tool",
+      "version": "1.0.0",
+      "description": "First npm CLI tool published",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": "https://github.com/nipeshkc7/npm-publish-demo",
+      "homepage": "https://github.com/nipeshkc7/npm-publish-demo#readme",
+      "bin": "./index.js",
+      "keywords": [
+        "cli",
+        "npmtool"
+      ],
+      "author": "Arpan Kc",
+      "license": "ISC",
+    }
+
 ## Creating a command-line tool
 
 We will be creating a simple command-line tool that prompts the user for a pokemon name and displays its types using the pokemon API. To get user prompts we'll be using Inquirer.js which lets you easily build beautiful command-line interfaces.
