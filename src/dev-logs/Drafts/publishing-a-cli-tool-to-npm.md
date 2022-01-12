@@ -29,7 +29,7 @@ First, initialize a new directory for your new npm package. This is no different
 Create the directory and cd into it.
 
     $ mkdir demo-npm-cli-tool
-    $ cd demo-npm-cli-tool.
+    $ cd demo-npm-cli-tool
 
 Then, run the npm initialization command and follow the prompts.
 
