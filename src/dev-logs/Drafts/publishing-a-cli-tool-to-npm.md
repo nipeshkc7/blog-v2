@@ -185,13 +185,13 @@ Let's talk about how to use Github actions to automate publishing to the npm reg
 
 Few important things to note here:
 
-* We're saying we want to trigger this action every time we push into the `main` branch. Another way would be to trigger it when you create a release using github. For this lines 2-4 should be updated to:
+* We're saying we want to trigger this action every time we push into the `main` branch. Another way would be to trigger it when you create a release using Github. For this, lines 2-4 should be updated to:
 
     on:
       release:
         types: [created]
 
-* Line 14 specifies the registry we will be publishing to which has to be `https://registry.npmjs.org` in our case. You may choose to publish it into the Github package registry which has the url `https://npm.pkg.github.com`
+* Line 14 specifies the registry we will be publishing to which has to be `https://registry.npmjs.org` in our case. You may choose to publish it into the Github package registry which has the URL `https://npm.pkg.github.com`
 * 
 
 ## Where to go from here?
