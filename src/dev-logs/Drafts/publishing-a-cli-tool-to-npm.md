@@ -127,6 +127,16 @@ This should yield something like this:
     ? Name of pokemon pikachu <enter>
     [ 'electric' ]
 
+The second way is by using the `npm link` command. To do this run this command inside your npm package directory:
+
+    npm link
+
+Given you have filled out the `bin` property in `package.json`, npm will install your package globally and refer to the `bin` entry and link your package name with the `index.js` file as specified in the package.json configuration. So you can run your command using your package name:
+
+    demo-npm-cli-tool
+
+This should run the command line script.
+
 If everything works as expected, you're now ready to publish your awesome tool to npmjs.com
 
 ## Publishing to npm
