@@ -118,7 +118,7 @@ Then we can get the user answers which for the purposes of this program, we'll a
 
 ## Testing locally
 
-There are two ways of testing your new npm tool locally. The easiest way however is by using the npx command with the local path of your npm package. To find the path of your package, you can use the `pwd` command in the package directory. Then from any other directory, you can run the command:
+There are two ways of testing your new npm tool locally. The easiest way is by using the npx command with the local path of your npm package. To find the path of your package, you can use the `pwd` command in the package directory. Then from any other directory, you can run the command:
 
     npx /path/to/package
 
