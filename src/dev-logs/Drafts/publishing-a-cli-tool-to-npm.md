@@ -117,6 +117,8 @@ Now that we have our npm tool up and running, the next step is to publish it. Th
 
 And there you have it, your package should be available at [https://www.npmjs.com/](https://www.npmjs.com/ "https://www.npmjs.com/").
 
+You can make updates and republish the package using the steps above but make sure to update the version number as npm won't let you publish with the same number.
+
 ## Running your tool
 
 Now using `npx`, the npm package runner, you can run your code from ANYWHERE without having to globally install the packages by running:
