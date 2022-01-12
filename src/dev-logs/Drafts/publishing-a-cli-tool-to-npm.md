@@ -208,7 +208,7 @@ Few important things to note here:
 There are plenty of other potential applications. Here are some ideas to get you started:
 
 * A CLI tool that generates a README based on some user-provided details.
-* A CLI tool that generates boilerplate code, something like `create-react-app`
+* A CLI tool that generates boilerplate code for your needs, something like `create-react-app`
 * A script hosted on GitHub gists you can share with your friends.
 * CLI tool that updates the `hosts` file that blocks distracting websites like Facebook and Instagram using [https://github.com/feross/hostile](https://github.com/feross/hostile "https://github.com/feross/hostile")
 
