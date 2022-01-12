@@ -191,6 +191,7 @@ Few important things to note here:
       release:
         types: [created]
 
+* Line 14 specifies the registry we will be publishing to which has to be `https://registry.npmjs.org` in our case. You may choose to publish it into the Github package registry which has the url `https://npm.pkg.github.com`
 * 
 
 ## Where to go from here?
