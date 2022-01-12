@@ -159,6 +159,8 @@ There are plenty of other potential applications. Here are some ideas to get you
 * A script hosted on GitHub gists you can share with your friends.
 * CLI tool that updates the `hosts` file that blocks distracting websites like Facebook and Instagram using [https://github.com/feross/hostile](https://github.com/feross/hostile "https://github.com/feross/hostile")
 
+I hope this post inspired you to create your own npm package.
+
 ## Source code
 
 Here are the code and package used in this tutorial.
