@@ -13,6 +13,7 @@ Command-line tools are amazing. With npx, you can now create, publish and run an
 Before we get into the how let's first discuss the why. In the last decade, if you've done any work even remotely related to react or node.js you might have heard of `create-react-app` which is typically run using npx to generate a boilerplate React application. Additionally, asides from boilerplate generators there are many existing packages that are run using npx such as:
 
 * [https://www.npmjs.com/package/node](https://www.npmjs.com/package/node "https://www.npmjs.com/package/node"): Let you run your scripts with different versions of node.
+* [https://www.npmjs.com/package/eslint](https://www.npmjs.com/package/eslint "https://www.npmjs.com/package/eslint"): You can use the one-off `npx eslint --init` command to check syntax and find problems in your code.
 * [https://github.com/dylang/npm-check](https://github.com/dylang/npm-check "https://github.com/dylang/npm-check"): Checks for incorrect/unused dependencies in your project.
 * [https://github.com/http-party/http-server](https://github.com/http-party/http-server "https://github.com/http-party/http-server") : (My personal favorite) This immediately creates an HTTP server and serves it locally and globally.
 
