@@ -192,7 +192,16 @@ Few important things to note here:
         types: [created]
 
 * Line 14 specifies the registry we will be publishing to which has to be `https://registry.npmjs.org` in our case. You may choose to publish it into the Github package registry which has the URL `https://npm.pkg.github.com`
-* The following lines do a clean install of the dependencies and then run the `publish` similarly to how it's done locally. For this command to work as expected you will need to create an access token from your npm account. For this, go to  
+* The following lines do a clean install of the dependencies and then run the `publish` similarly to how it's done locally. For this command to work as expected you will need to create an access token from your npm account. For this, click on the top right button with your logo and click on `Access Tokens`. From there, press the `Generate Token` button which shows you three options. Click on the `Automation` checkbox which will give us a token that we can use in our Github Actions. ![](/img/screen-shot-2022-01-13-at-8-33-19-am.png)
+
+  ![](/img/screen-shot-2022-01-13-at-8-37-06-am.png)
+* To add the access token into github, go to your repository and click on `settings` , go to the `secrets` tab and create a new secret named `NPM_TOKEN` which is the variable name we've used in our actions file. In the `Value` text field paste the token generated from the preceding step.
+
+![](/img/screen-shot-2022-01-13-at-8-40-12-am.png)
+
+* Finally to test the pipeline, simply push a new commit to `main` Make sure that the version number in `package.json` has changed. Then in your Github actions tab, you should have something like this which means you have successfully deployed your npm package.
+
+  ![](/img/screen-shot-2022-01-13-at-8-42-36-am.png)
 
 ## Where to go from here?
 
