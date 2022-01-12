@@ -18,7 +18,7 @@ Before we get into the how let's first discuss the why. In the last decade, if y
 
 And there are many more out there. These packages do a great job of demonstrating the power and convenience that npx provides. In addition to npx, we'll be using a command-line interface library called `inquirer` that lets us take user inputs. Combining npx with a CLI package lets us build powerful tools and the applications are possibly endless.
 
-However, a quick word of caution: it's not recommended that you run random/unknown scripts on your computer. This might cause serious harm if the publisher has created the package with malicious intent. There have been breaking news in the past regarding even the more popular packages like `left-pad` and `event-stream` that have created controversy regarding the safety of npm packages. Some of the harmful effects of using untrusted npm/npx scripts may include corrupting/deleting files in your system, harvesting sensitive information like environment variables, OS details, etc
+However, a quick word of caution: it's not recommended that you run random/unknown scripts on your computer. This might cause serious harm if the publisher has created the package with malicious intent. There have been breaking news in the past regarding even the more popular packages like `left-pad` and `event-stream` that have created controversy regarding the safety of npm packages. Some of the harmful effects of using untrusted npm/npx scripts may include corrupting/deleting files in your system, harvesting sensitive information like environment variables, OS details, and much more.
 
 Now that we've covered the why let's get started with the how.
 
@@ -49,8 +49,6 @@ By the end, you should have a `package.json` file which should look something li
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
       },
-    
-    {
       "keywords": [],
       "author": "",
       "license": "ISC"
