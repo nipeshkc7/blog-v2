@@ -18,7 +18,7 @@ Before we get into the how let's first discuss the why. In the last decade, if y
 
 And there are many more out there. These packages do a great job of demonstrating the power and convenience that npx provides. In addition to npx, we'll be using a command-line interface library called `inquirer` that lets us take user inputs. Combining npx with a CLI package lets us build powerful tools and the applications are possibly endless.
 
-Now that we've covered the why let's get started with the how. 
+Now that we've covered the why let's get started with the how.
 
 ## Creating an npm project
 
@@ -112,7 +112,7 @@ In your `index.js` add the following code:
 
 Let's go through the code, the first line `#!/usr/bin/env node` is called a [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix) "shebang") line, which tells a Unix like system what executable to use to run the script, which in this case is `node`.
 
-Then we'll use the `inquirer` package to get input from the user, currently, the input type is a question, but you can also have lists, checkboxes, and much more. 
+Then we'll use the `inquirer` package to get input from the user, currently, the input type is a question, but you can also have lists, checkboxes, and much more.
 
 Then we can get the user answers which for the purposes of this program, we'll append to the API request. Then we can use `console.log` to display the result back to the user.
 
@@ -159,6 +159,39 @@ Now using `npx`, the npm package runner, you can run your code from ANYWHERE wit
 <gif>
 
 And the cool thing is you `npx` comes with `npm` by default, so you don't need to worry about installing it separately.
+
+## Bonus: Deploying your npm package using Github Actions
+
+Let's talk about how to use Github actions to automate publishing to the npm registry. We're going to create a workflow that's going to get triggered every time you push your changes to the `main` (or `master`) branch. For this, create a `publish.yml` file in the `.github/workflows` directory. And add the following contents into the yml file:
+
+    name: Publish Package to npmjs
+    on:
+      push:
+        branches: [main]
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          # Setup .npmrc file to publish to npm
+          - uses: actions/setup-node@v2
+            with:
+              node-version: '16.x'
+              registry-url: 'https://registry.npmjs.org'
+          - run: npm ci
+          - run: npm publish
+            env:
+              NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+Few important things to note here:
+
+* We're saying we want to trigger this action every time we push into the `main` branch. Another way would be to trigger it when you create a release using github. For this lines 2-4 should be updated to:
+
+    on:
+      release:
+        types: [created]
+
+* 
 
 ## Where to go from here?
 
