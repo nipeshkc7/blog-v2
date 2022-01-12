@@ -216,7 +216,7 @@ I hope this post inspired you to create your own npm package.
 
 ## Source code
 
-Here are the code and package used in this tutorial.
+The source code and the packages used for this tutorial can be found here, feel free to use the code as a reference and make it your own:
 
 * Source code: [https://github.com/nipeshkc7/npm-publish-demo](https://github.com/nipeshkc7/npm-publish-demo "https://github.com/nipeshkc7/npm-publish-demo")
 * Package: [https://www.npmjs.com/package/npm-tool-8687](https://www.npmjs.com/package/npm-tool-8687 "https://www.npmjs.com/package/npm-tool-8687")
