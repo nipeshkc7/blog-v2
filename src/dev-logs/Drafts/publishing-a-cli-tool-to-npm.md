@@ -10,7 +10,7 @@ feature_image: ''
 ---
 Command-line tools are amazing. With npx, you can now create, publish and run an easily accessible command-line tool within minutes. This will be a step-by-step guide that will show you how to do just that. By the end of this project, you should have an npm CLI tool up in the npm registry which you should be able to invoke from anywhere using `npx demo-npm-cli-tool` .
 
-Before we get into the how let's first discuss the why. In the last decade, if you've done any work even remotely related to react or node.js you might have heard of `create-react-app` which is typically run using npx to generate a boilerplate React application. Additionally, asides from boilerplate generators there are many existing packages that are run using npx such as:
+Before we get into the how let's first discuss the why. In the last decade, if you've done any work even remotely related to react or node.js you might have heard of `create-react-app` which is typically run using npx to generate a boilerplate React application. Additionally, asides from boilerplate generators there are many existing packages that can be run using npx such as:
 
 * [https://www.npmjs.com/package/node](https://www.npmjs.com/package/node "https://www.npmjs.com/package/node"): Let you run your scripts with different versions of node.
 * [https://www.npmjs.com/package/eslint](https://www.npmjs.com/package/eslint "https://www.npmjs.com/package/eslint"): You can use the one-off `npx eslint --init` command to check syntax and find problems in your code.
