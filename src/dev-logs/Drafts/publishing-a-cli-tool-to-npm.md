@@ -192,7 +192,7 @@ Few important things to note here:
         types: [created]
 
 * Line 14 specifies the registry we will be publishing to which has to be `https://registry.npmjs.org` in our case. You may choose to publish it into the Github package registry which has the URL `https://npm.pkg.github.com`
-* 
+* The following lines do a clean install of the dependencies and then run the `publish` similarly to how it's done locally. For this command to work as expected you will need to create an access token from your npm account. For this, go to  
 
 ## Where to go from here?
 
