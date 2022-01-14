@@ -22,6 +22,8 @@ Greetings. I am Arpan, a full-stack software engineer and open source enthusiast
 
 In my day-to-day, I build full-stack solutions and work with different kinds of technologies like Node.js, Azure Cloud Services, React. I like to be involved in products end-to-end, whether the work involves coding, designing API specs based on the Australian government standards, setting up efficient DevOps processes to make my teammates lives easier, setting up a messaging queue for async communication, optimizing a Dockerfile for smaller Rust containers or just plain making powerBI reports for better business insights. I strongly believe that technology is a way to solve interesting problems and try to approach software engineering in a very pragmatic way. Having said that, I love cool tech!
 
+![](/img/software-eng.gif)
+
 ### How this blog will be organized
 
 While I strive to write longer form, in-depth articles, which will be featured on the main page. I also have a section that I named `dev logs` where I simply jot down some notes that I usually refer to from time to time.
