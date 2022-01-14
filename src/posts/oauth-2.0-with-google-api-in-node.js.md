@@ -11,6 +11,8 @@ layout: layouts/post.njk
 feature_image: img/google.png
 
 ---
+_This blog post was originally posted on_ [_dev.to_](dev.to)
+
 With all the async awaits, promises, `.then` and all the other JS-specific stuff, doing even simple tasks in Javascript can feel overwhelming for beginner backend developers.
 
 To preface, I'm currently working on my own application which is a simple Match betting tracker to keep track of my bets, and decided to add OAuth authentication in the app to let users log in from their Gmail account. 
@@ -24,7 +26,7 @@ The first thing I did was get the google api:
       npm install googleapis
 
 In the actual program:  
-initialized the API library and setup google config.
+initialized the API library and set up google config.
 
     const { google } = require('googleapis');
     const oauth2 = google.oauth2('v2');
@@ -39,7 +41,7 @@ So basically all I had to do was these 3 things:
 
 1. get a Redirect url for the clients
 2. The url also contains a code which then I use to get a token ( if the user signs in to their Google account that is)
-3. And finally I use the token to get the user details
+3. And finally, I use the token to get the user details
 
 Step 1:
 
@@ -66,7 +68,7 @@ Step 2 and 3:
             })
     }
 
-And so in the main program , I got a connection url using getConnectionUrl() which then gave me the code in the url which I passed on to getUserDetails() to get the user details.
+And so in the main program , I got a connection URL using getConnectionUrl() which then gave me the code in the URL which I passed on to `getUserDetails()` to get the user details.
 
 So this is how I got OAuth authentication working in my application.
 
@@ -76,7 +78,7 @@ If you want to check out my repo, here's the link :
 
 **_UPDATE_**
 
-Using async-await steps 2 and 3 can be reduced to ::
+Using async-await steps 2 and 3 can be reduced to::
 
      function async getUserDetails(code) {
        const {tokens} = await Oauth2Client.getToken(code);
@@ -85,6 +87,4 @@ Using async-await steps 2 and 3 can be reduced to ::
        return usr_info;
      } 
 
-This looks cleaner and async-await is alot more intuitive to use.
-
-_This blog post was originally posted on_ [_dev.to_](dev.to)
+This looks cleaner and async-await is a lot more intuitive to use.
