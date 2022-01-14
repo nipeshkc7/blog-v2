@@ -1,9 +1,9 @@
 ---
 title: OAuth 2.0 with Google API in Node.js
-description: I had trouble getting my head around the authentication flow with all
-  the tokens and secrets and all that. But digging deep, it was quite simple actually
-  and started to appreciate how google makes the process so simple and dare I say,
-  elegant.
+description: Initially, I had trouble getting my head around the authentication flow
+  with all the tokens and secrets. But upon deeper inspection, it was quite simple
+  actually, and started to appreciate how google makes the process so simple and dare
+  I say, elegant.
 date: 2020-08-16T14:00:00.000+00:00
 tags:
 - blog
