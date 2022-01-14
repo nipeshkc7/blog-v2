@@ -1,9 +1,9 @@
 ---
 title: Podcasts for Well Rounded Developers
 description: List of Podcasts related to Software development and personal finances.
-date: 2021-08-28T14:00:00Z
+date: 2021-08-28T14:00:00.000+00:00
 tags:
-- blog
+- devlogs
 layout: layouts/post.njk
 feature_image: img/podcast.jpeg
 
