@@ -11,7 +11,7 @@ layout: layouts/post.njk
 feature_image: img/google.png
 
 ---
-With all the async awaits, promises, `.then` and all the other JS specific stuff, doing even simple tasks in Javascript can feel overwhelming for beginner backend developers.
+With all the async awaits, promises, `.then` and all the other JS-specific stuff, doing even simple tasks in Javascript can feel overwhelming for beginner backend developers.
 
 To preface, I'm currently working on my own application which is a simple Match betting tracker to keep track of my bets, and decided to add in OAuth authentication in the app. 
 
