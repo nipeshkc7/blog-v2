@@ -1,6 +1,9 @@
 ---
 title: Welcome To Arpan's Blog
-description: Exploring the delightful world of JAMSTACK and Static site generators.
+description: Greetings. I am Arpan, a full-stack software engineer and open source
+  enthusiast based in Sydney currently working at A2B Australia. I started this blog
+  as a way to share my knowledge about topics related to tech and software engineering
+  in general.
 date: 2020-08-10
 tags:
 - misc
