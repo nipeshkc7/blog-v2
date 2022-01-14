@@ -10,7 +10,7 @@ layout: layouts/post.njk
 Greetings. I am Arpan, a full-stack software engineer and open source enthusiast based in Sydney currently working at A2B Australia. I started this blog as a way to share my knowledge about topics related to tech and software engineering in general. The upcoming blog posts will focus on a variety of topics including (but not limited to):
 
 * Backend Technologies ( Node.js, Rust) 
-* Front-end technologies (React, Vue)
+* Front-end technologies (React, Vue, Next.js)
 
 ## What to expect?
 
