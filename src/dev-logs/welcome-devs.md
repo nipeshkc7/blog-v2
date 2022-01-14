@@ -14,10 +14,10 @@ Greetings. I am Arpan, a full-stack software engineer and open source enthusiast
 * Cloud Technologies (GCP, AWS, Azure)
 * DevOps
 
-## What to expect?
+### Find Me in other places:
 
-I will be documenting my adventures in development including tech like:
+You can find me in other places where I write blog posts or contribute like:
 
-* Javascript (React/ Vue/ Node.js)
-* Cloud (AWS/GCP)
-* And everything Else !
+* Github: [https://github.com/nipeshkc](https://github.com/nipeshkc7 "arpan github")
+* Hackernoon: [https://hackernoon.com/u/arpankc](https://hackernoon.com/u/arpankc "https://hackernoon.com/u/arpankc")
+* 
