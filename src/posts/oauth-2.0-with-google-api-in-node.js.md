@@ -19,9 +19,9 @@ To preface, I'm currently working on my own application which is a simple Match 
 
 The first thing I did was set up an account in Google console, and got me some shiny new credentials (client ID and client Secret) for OAuth 2.0.
 
-I had trouble getting my head around the authentication flow with all the tokens and secrets and all that. But digging deep, it was quite simple actually and started to appreciate how google makes the process so simple and dare I say, elegant.
+Initially, I had trouble getting my head around the authentication flow with all the tokens and secrets. But upon deeper inspection, it was quite simple actually, and started to appreciate how google makes the process so simple and dare I say, elegant.
 
-The first thing I did was get the google api:
+The first thing I did was get the Google API:
 
       npm install googleapis
 
