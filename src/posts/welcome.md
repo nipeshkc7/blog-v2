@@ -26,13 +26,13 @@ In my day-to-day, I build full-stack solutions and work with different kinds of 
 
 ### How this blog will be organized
 
-While I strive to write longer form, in-depth articles, which will be featured on the main page. I also have a section that I named `dev logs` where I simply jot down some notes that I usually refer to from time to time.
+While I strive to write longer form, in-depth articles, which will be featured on the main page. I also have a section that I named `dev logs` where I simply jot down some notes and gotchas I've encountered during my hair-pulling debugging sessions. I refer to these pieces from time to time and I feel like they will be helpful for other software engineers alike.
 
 ### Find Me in other places:
 
 You can find me in other places where I write blog posts or contribute like:
 
-* Github: [https://github.com/nipeshkc](https://github.com/nipeshkc "https://github.com/nipeshkc")
+* Github: [https://github.com/nipeshkc7](https://github.com/nipeshkc7 "Arpan Github")
 * Hackernoon: [https://hackernoon.com/u/arpankc](https://hackernoon.com/u/arpankc "https://hackernoon.com/u/arpankc")
 * StackOverflow: [https://stackoverflow.com/users/6470513/arpan-kc](https://stackoverflow.com/users/6470513/arpan-kc "https://stackoverflow.com/users/6470513/arpan-kc")
 * DEV: [https://dev.to/nipeshkc7](https://dev.to/nipeshkc7 "https://dev.to/nipeshkc7")
