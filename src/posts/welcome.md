@@ -1,5 +1,5 @@
 ---
-title: Welcome To My Personal Blog
+title: Welcome To Arpan's Blog
 description: Exploring the delightful world of JAMSTACK and Static site generators.
 date: 2020-08-10
 tags:
