@@ -17,6 +17,10 @@ Greetings. I am Arpan, a full-stack software engineer and open source enthusiast
 * Cloud Technologies (GCP, AWS, Azure)
 * DevOps
 
+### About my work
+
+In my day to day, I build full-stack solutions and work with different kinds of technologies like Node.js, Azure Cloud Services, React. I like to be involved in solutions end-to-end, whether the work involves coding, designing API specs based on the Australian government standard, setting up efficient DevOps processes to make my teammates lives easier, setting up a messaging queue for async communication, or just plain making powerBI reports for better business insights. 
+
 ### Find Me in other places:
 
 You can find me in other places where I write blog posts or contribute like:
