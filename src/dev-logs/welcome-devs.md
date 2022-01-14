@@ -1,6 +1,9 @@
 ---
 title: Welcome to Arpan's Blog
-description: Let
+description: Greetings. I am Arpan, a full-stack software engineer and open source
+  enthusiast based in Sydney currently working at A2B Australia. I started this blog
+  as a way to share my knowledge about topics related to tech and software engineering
+  in general.
 date: 2020-08-10
 tags:
 - devlogs
