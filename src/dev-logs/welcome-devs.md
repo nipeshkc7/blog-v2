@@ -23,4 +23,6 @@ You can find me in other places where I write blog posts or contribute like:
 
 * Github: [https://github.com/nipeshkc](https://github.com/nipeshkc7 "arpan github")
 * Hackernoon: [https://hackernoon.com/u/arpankc](https://hackernoon.com/u/arpankc "https://hackernoon.com/u/arpankc")
-* 
+* StackOverflow: [https://stackoverflow.com/users/6470513/arpan-kc](https://stackoverflow.com/users/6470513/arpan-kc "https://stackoverflow.com/users/6470513/arpan-kc")
+* DEV: [https://dev.to/nipeshkc7](https://dev.to/nipeshkc7 "https://dev.to/nipeshkc7")
+* Medium: [https://medium.com/@arpankc](https://medium.com/@arpankc "https://medium.com/@arpankc")
