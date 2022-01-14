@@ -11,6 +11,8 @@ Greetings. I am Arpan, a full-stack software engineer and open source enthusiast
 
 * Backend Technologies ( Node.js, Rust) 
 * Front-end technologies (React, Vue, Next.js)
+* Cloud Technologies (GCP, AWS, Azure)
+* DevOps
 
 ## What to expect?
 
