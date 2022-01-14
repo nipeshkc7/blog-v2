@@ -24,7 +24,7 @@ The first thing I did was get the google api:
       npm install googleapis
 
 In the actual program:  
-initialized the api library and setup googleConfigs.
+initialized the API library and setup google config.
 
     const { google } = require('googleapis');
     const oauth2 = google.oauth2('v2');
@@ -38,7 +38,7 @@ initialized the api library and setup googleConfigs.
 So basically all I had to do was these 3 things:
 
 1. get a Redirect url for the clients
-2. The url also contains a code which then I use to get a token ( if the user signs in to their google account that is)
+2. The url also contains a code which then I use to get a token ( if the user signs in to their Google account that is)
 3. And finally I use the token to get the user details
 
 Step 1:
@@ -70,15 +70,9 @@ And so in the main program , I got a connection url using getConnectionUrl() whi
 
 So this is how I got OAuth authentication working in my application.
 
-Thanks for reading. Would appreciate feedbacks.
-
 If you want to check out my repo, here's the link :
 
 * [Matched-betting-tracker](https://github.com/nipeshkc7/matched-betting-tracker)
-
-Please star it, if you like it.
-
-_P.S. Please follow me on twitter, I'd really appreciate it._ [_@Nipeshkc_](https://twitter.com/NipeshKc7)
 
 **_UPDATE_**
 
@@ -91,6 +85,6 @@ Using async-await steps 2 and 3 can be reduced to ::
        return usr_info;
      } 
 
-This looks cleaner and async-await seems to be more intuitive to use.
+This looks cleaner and async-await is alot more intuitive to use.
 
 _This blog post was originally posted on_ [_dev.to_](dev.to)
