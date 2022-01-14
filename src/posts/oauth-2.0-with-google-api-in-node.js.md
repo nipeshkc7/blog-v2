@@ -13,7 +13,7 @@ feature_image: img/google.png
 ---
 With all the async awaits, promises, `.then` and all the other JS-specific stuff, doing even simple tasks in Javascript can feel overwhelming for beginner backend developers.
 
-To preface, I'm currently working on my own application which is a simple Match betting tracker to keep track of my bets, and decided to add in OAuth authentication in the app. 
+To preface, I'm currently working on my own application which is a simple Match betting tracker to keep track of my bets, and decided to add OAuth authentication in the app to let users log in from their Gmail account. 
 
 The first thing I did was set up an account in Google console, and got me some shiny new credentials (client ID and client Secret) for OAuth 2.0.
 
