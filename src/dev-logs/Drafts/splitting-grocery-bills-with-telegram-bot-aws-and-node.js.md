@@ -35,4 +35,18 @@ First of all, we'll be organizing our project structure like this:
 
 The `template.yml` will look like:
 
- 
+    AWSTemplateFormatVersion: '2010-09-09'
+    Transform: AWS::Serverless-2016-10-31
+    Description: A serverless function that listens to incoming webhooks from the Telegram Server 
+    Resources:
+      BotHelper:
+        Type: AWS::Serverless::Function
+        Properties:
+          Handler:  BotHelper/index.handler
+          Runtime: nodejs14.x
+          Events:
+            TelegramServiceAPI:
+              Type: Api
+              Properties:
+                Path: /message
+                Method: GET
