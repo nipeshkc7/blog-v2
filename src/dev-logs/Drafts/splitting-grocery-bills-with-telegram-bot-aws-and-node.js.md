@@ -21,3 +21,7 @@ The main parts of the architecture will be:
 * AWS Lambda function: To process and send messages to telegram via the bot's API
 * DynamoDB: To Store / keep track of the amount owed by each person.
 * API Gateway: As the name suggests, an API pathway to interface with the lambda function.
+
+## Deploying to AWS using SAM
+
+We'll deploy our resources to AWS using `SAM` command-line tool, which lets us build, test, and deploy our AWS resources using either a guided method or by manually specifying the resource template. In practical scenarios, most organizations use a resource template for deploying their resources. So we'll be using this method as this will prove more beneficial for those with already a basic knowledge of the cloud. 
