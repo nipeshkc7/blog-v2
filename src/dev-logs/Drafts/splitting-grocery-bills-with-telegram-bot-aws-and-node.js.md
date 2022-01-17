@@ -24,4 +24,15 @@ The main parts of the architecture will be:
 
 ## Deploying to AWS using SAM
 
-We'll deploy our resources to AWS using `SAM` command-line tool, which lets us build, test, and deploy our AWS resources using either a guided method or by manually specifying the resource template. In practical scenarios, most organizations use a resource template for deploying their resources. So we'll be using this method as this will prove more beneficial for those with already a basic knowledge of the cloud. 
+We'll deploy our resources to AWS using `SAM` command-line tool, which lets us build, test, and deploy our AWS resources using either a guided method or by manually specifying the resource template. In practical scenarios, most organizations use a resource template for deploying their resources. So we'll be using this method as this will prove more beneficial for those with already a basic knowledge of the cloud. If you want a beginner friendly guide to deployements, please refer to this article : [https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html"). 
+
+First of all, we'll be organizing our project structure like this:
+
+    TelegramBotServer
+      |- template.yml
+      |- BotHelper
+          |-index.js
+
+The `template.yml` will look like:
+
+ 
