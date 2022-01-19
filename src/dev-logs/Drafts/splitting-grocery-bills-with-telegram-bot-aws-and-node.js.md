@@ -49,7 +49,7 @@ The `template.yml` will look like:
               Type: Api
               Properties:
                 Path: /message
-                Method: GET
+                Method: POST
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
 
