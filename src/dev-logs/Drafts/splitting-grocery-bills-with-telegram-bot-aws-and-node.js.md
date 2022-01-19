@@ -68,6 +68,14 @@ For windows, you can replace `export` with `set`.
 
 You can now validate your template.yml file using the command `sam validate --region ap-southeast-2` which should hopefully tell you that you have a valid template. If not, investigate the details of the error. For the deployment operations,  we'll need to create an s3 bucket using the command:
 
-    aws s3 mb s3://jesus-deployement-bucket --region ap-southeast-2
+    aws s3 mb s3://telegram-bot-deployement-bucket --region ap-southeast-2
 
 To verify it's been created, you can list all s3 buckets using `aws s3 ls` command.
+
+After that, we need to package our code using:
+
+    sam package \                                                  
+    --template-file template.yml \     
+    --output-template-file package.yml \
+    --s3-bucket telegram-bot-deployement-bucket \                                 
+    --region ap-southeast-2
