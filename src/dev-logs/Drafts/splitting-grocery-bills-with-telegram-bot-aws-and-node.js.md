@@ -79,3 +79,10 @@ After that, we need to package our code using:
     --output-template-file package.yml \
     --s3-bucket telegram-bot-deployement-bucket \                                 
     --region ap-southeast-2
+
+Then we can deploy using:
+
+    sam deploy \
+    --template-file package.yml \
+    --stack-name jesus-stack \
+    --region ap-southeast-2
