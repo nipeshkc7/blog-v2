@@ -82,7 +82,10 @@ After that, we need to package our code using:
 
 Then we can deploy using:
 
-    sam deploy \
+    sam deploy \                                                                                                                   
     --template-file package.yml \
-    --stack-name jesus-stack \
+    --stack-name jesus-stack \    
+    --capabilities CAPABILITY_IAM \
     --region ap-southeast-2
+
+We have to explicitly specify that we are okay with creating an IAM-related resource using the `--capabilities` argument.
