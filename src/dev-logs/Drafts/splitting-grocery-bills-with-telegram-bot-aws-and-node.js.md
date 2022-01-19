@@ -84,7 +84,7 @@ Then we can deploy using:
 
     sam deploy \                                                                                                                   
     --template-file package.yml \
-    --stack-name jesus-stack \    
+    --stack-name telegram-service-stack \    
     --capabilities CAPABILITY_IAM \
     --region ap-southeast-2
 
