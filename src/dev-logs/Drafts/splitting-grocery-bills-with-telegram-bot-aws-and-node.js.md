@@ -24,7 +24,7 @@ The main parts of the architecture will be:
 
 ## Deploying to AWS using SAM
 
-We'll deploy our resources to AWS using `SAM` command-line tool, which lets us build, test, and deploy our AWS resources using either a guided method or by manually specifying the resource template. In practical scenarios, most organizations use a resource template for deploying their resources. So we'll be using this method as this will prove more beneficial for those with already a basic knowledge of the cloud. If you want a beginner-friendly guide to deployments, please refer to this article: [https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html"). 
+We'll deploy our resources to AWS using `SAM` command-line tool, which lets us build, test, and deploy our AWS resources using either a guided method or by manually specifying the resource template. In practical scenarios, most organizations use a resource template for deploying their resources. So we'll be using this method as this will prove more beneficial for those with already a basic knowledge of the cloud. If you want a beginner-friendly guide to deployments, please refer to this article: [https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html").
 
 First of all, we'll be organizing our project structure like this:
 
@@ -50,3 +50,19 @@ The `template.yml` will look like:
               Properties:
                 Path: /message
                 Method: GET
+
+Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
+
+* `AWS_ACCESS_KEY_ID`
+* `AWS_SECRET_ACCESS_KEY`
+* `AWS_REGION`
+
+The access keys should be generated from a console which ideally should be associated with an IAM role. However, keys from a root user also work but it is not recommended.
+
+You can use these commands to set it up in your Mac/Linux:
+
+    export AWS_ACCESS_KEY_ID=your_access_key_id
+    export AWS_SECRET_ACCESS_KEY=your_secret_access_key
+    export AWS_REGION=your_aws_region
+
+For windows, you can replace `export` with `set`. 
