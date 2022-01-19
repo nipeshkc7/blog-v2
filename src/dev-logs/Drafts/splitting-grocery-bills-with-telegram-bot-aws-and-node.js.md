@@ -59,6 +59,8 @@ Before we start using deploy commands, we'll need to set up some configurations 
 
 The access keys should be generated from a console which ideally should be associated with an IAM role. However, keys from a root user also work but it is not recommended.
 
+Alternatively, you can use the `aws configure` command to set up these environment variables.
+
 You can use these commands to set it up in your Mac/Linux:
 
     export AWS_ACCESS_KEY_ID=your_access_key_id
