@@ -63,6 +63,7 @@ You can use these commands to set it up in your Mac/Linux:
 
     export AWS_ACCESS_KEY_ID=your_access_key_id
     export AWS_SECRET_ACCESS_KEY=your_secret_access_key
-    export AWS_REGION=ap-southeast-2
 
-For windows, you can replace `export` with `set`. 
+For windows, you can replace `export` with `set`.
+
+You can now validate your template.yml file using the command `sam validate --region ap-southeast-2`
