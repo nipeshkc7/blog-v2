@@ -66,4 +66,4 @@ You can use these commands to set it up in your Mac/Linux:
 
 For windows, you can replace `export` with `set`.
 
-You can now validate your template.yml file using the command `sam validate --region ap-southeast-2`
+You can now validate your template.yml file using the command `sam validate --region ap-southeast-2` which should hopefully tell you that you have a valid template. If not, investigate the details of the error.
