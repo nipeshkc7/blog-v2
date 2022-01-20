@@ -116,3 +116,5 @@ Additionally, you might need to set your bot's privacy credentials using `/BotFa
 Next, you need to create a telegram group with all the members including your bot. And using our lambda function, we'll receive all the chat messages via the webhook.
 
 ## Programming the bot
+
+Now for the fun part, we're going to program the bot so that it reads messages from the chat group where people will share how much they spent and on what. We will then take that chat message, and using regex store the `amount` text in our Dynamo DB database which will be our source of truth for who spent what. We will then return a message back to the user specifying who owes how much, and to whom. 
