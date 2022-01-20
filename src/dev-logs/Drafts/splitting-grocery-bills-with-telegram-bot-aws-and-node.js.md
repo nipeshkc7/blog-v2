@@ -20,11 +20,11 @@ The main parts of the architecture will be:
 
 * AWS Lambda function: To process and send messages to telegram via the bot's API
 * DynamoDB: To Store / keep track of the amount owed by each person.
-* API Gateway: As the name suggests, an API pathway to interface with the lambda function.
+* API Gateway: As the name suggests, an API pathway to interface with the lambda function. Lambda by default does not generate an API that can be invoked.
 
 ## Deploying to AWS using SAM
 
-We'll deploy our resources to AWS using `SAM` command-line tool, which lets us build, test, and deploy our AWS resources using either a guided method or by manually specifying the resource template. In practical scenarios, most organizations use a resource template for deploying their resources. So we'll be using this method as this will prove more beneficial for those with already a basic knowledge of the cloud. If you want a beginner-friendly guide to deployments, please refer to this article: [https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html").
+We'll deploy our resources to AWS using `SAM` command-line tool, which lets us build, test, and deploy our AWS resources using either a guided method or by manually specifying the resource template. In practical scenarios, most organizations use a resource template for deploying their resources. So we'll be using this method as this will prove more beneficial for those with already a basic knowledge of the cloud. If you want a beginner-friendly guide to deployments, AWS has an awesome guide: [https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html").
 
 First of all, we'll be organizing our project structure like this:
 
@@ -39,7 +39,7 @@ The `template.yml` will look like:
     Transform: AWS::Serverless-2016-10-31
     Description: A serverless function that listens to incoming webhooks from the Telegram Server 
     Resources:
-      BotHelper:
+      TelegramBotServer:
         Type: AWS::Serverless::Function
         Properties:
           Handler:  BotHelper/index.handler
@@ -50,6 +50,17 @@ The `template.yml` will look like:
               Properties:
                 Path: /message
                 Method: POST
+      TelegramBotInvokePermission:
+        Type: AWS::Lambda::Permission
+        Properties:
+          Action: lambda:InvokeFunction
+          FunctionName:
+            Fn::GetAtt:
+            - BotHelper 
+            - Arn
+          Principal: apigateway.amazonaws.com
+          SourceArn:
+            Fn::Sub: arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:*/*/*/*
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
 
@@ -117,4 +128,4 @@ Next, you need to create a telegram group with all the members including your bo
 
 ## Programming the bot
 
-Now for the fun part, we're going to program the bot so that it reads messages from the chat group where people will share how much they spent and on what. We will then take that chat message, and using regex store the `amount` text in our Dynamo DB database which will be our source of truth for who spent what. We will then return a message back to the user specifying who owes how much, and to whom. 
+Now for the fun part, we're going to program the bot so that it reads messages from the chat group where people will share how much they spent and on what. We will then take that chat message, and using regex store the `amount` text in our Dynamo DB database which will be our source of truth for who spent what. We will then return a message back to the user specifying who owes how much, and to whom.
