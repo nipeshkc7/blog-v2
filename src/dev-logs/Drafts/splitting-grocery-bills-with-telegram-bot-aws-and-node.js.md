@@ -94,10 +94,10 @@ We have to explicitly specify that we are okay with creating an IAM-related reso
 
 ## Setting Up a telegram bot
 
-To set up a telegram bot, well, there's a bot for that. It's called Botfather (get it?). You can access Botfather via [https://telegram.me/BotFather](https://telegram.me/BotFather "https://telegram.me/BotFather"). There you can use commands to create your bot. 
+To set up a telegram bot, well, there's a bot for that. It's called Botfather (get it?). You can access Botfather via [https://telegram.me/BotFather](https://telegram.me/BotFather "https://telegram.me/BotFather"). There you can use commands to create your bot.
 
 Your interactions should look something like this:
 
 <screenshot>
 
-At the end of the process, you should get a unique **secret** token that you use to communicate with the bot. A full list of commands accepted by the bot can be found at [https://core.telegram.org/bots/api](https://core.telegram.org/bots/api "https://core.telegram.org/bots/api"). We'll be communicating via HTTP requests.
+At the end of the process, you should get a unique **secret** **token** that you will use to communicate with the bot. A full list of commands accepted by the bot can be found at [https://core.telegram.org/bots/api](https://core.telegram.org/bots/api "https://core.telegram.org/bots/api"). We'll be communicating via HTTP requests.
