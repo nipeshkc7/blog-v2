@@ -103,6 +103,12 @@ Then we can deploy using:
 
 We have to explicitly specify that we are okay with creating an IAM-related resource using the `--capabilities` argument.
 
+Since you'll probably be packaging and deploying it together, to save us some time, we can use an alias for deployments using:
+
+    alias deployx='sam package --template-file template.yml --output-template-file package.yml --s3-bucket telegram-bot-deployement-bucket --region ap-southeast-2'
+
+So next time you can deploy using `deployx`
+
 ## Setting Up a telegram bot
 
 To set up a telegram bot, well, there's a bot for that. It's called Botfather (get it?). You can access Botfather via [https://telegram.me/BotFather](https://telegram.me/BotFather "https://telegram.me/BotFather"). There you can use commands to create your bot.
