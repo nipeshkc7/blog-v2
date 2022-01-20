@@ -101,3 +101,14 @@ Your interactions should look something like this:
 <screenshot>
 
 At the end of the process, you should get a unique **secret** **token** that you will use to communicate with the bot. A full list of commands accepted by the bot can be found at [https://core.telegram.org/bots/api](https://core.telegram.org/bots/api "https://core.telegram.org/bots/api"). We'll be communicating via HTTP requests.
+
+Now we'll need to specify the webhook for the bot. This is basically asking Telegram to call our Lambda function with bot related events. We're more interested in the group chat messages. We can set up our webhook using the following curl command:
+
+    curl --request POST \
+    --url https://api.telegram.org/bot<TELEGRAM_TOKEN>/setWebhook\
+    --header 'content-type: application/json'\
+    --data '{"url": "<LINK_TO_YOUR_LAMBDA_API>"}'
+
+Additionally, you might need to set your bot's privacy credentials using `/BotFather` . This will enable us to read group messages. For this, use the command `/setprivacy`:
+
+<screenshot>
