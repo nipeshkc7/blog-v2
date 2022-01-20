@@ -112,3 +112,7 @@ Now we'll need to specify the webhook for the bot. This is basically asking Tele
 Additionally, you might need to set your bot's privacy credentials using `/BotFather` . This will enable us to read group messages. For this, use the command `/setprivacy`:
 
 <screenshot>
+
+Next, you need to create a telegram group with all the members including your bot. And using our lambda function, we'll receive all the chat messages via the webhook.
+
+## Programming the bot
