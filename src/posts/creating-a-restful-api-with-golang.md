@@ -22,7 +22,7 @@ Golang from Google is an open-source programming language that works great for a
 Although Golang was primarily developed by Google for their Google Cloud Plaforms' infrastructure to solve issues related to scalability. However, it has found a number of different applications in the last decade including:
 
 * Web Applications
-* Command line tools
+* Command-line tools
 * Data processing and Machine learning
 
 #### Initializing Go
