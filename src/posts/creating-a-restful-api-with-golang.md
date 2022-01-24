@@ -10,7 +10,7 @@ feature_image: img/golang.png
 ---
 ### Overview
 
-Golang from Google is an open-source programming language that works great for any applications above the Network layer. It's a statically typed language that feels similar to a dynamically typed language. Great thing about Golang is that it is compiled into a single binary making it fast and portable.
+Golang from Google is an open-source programming language that works great for any applications above the Network layer. It's a statically typed language that feels similar to a dynamically typed language and is an easy language for developers to learn and be productive with quickly. Great thing about Golang is that it is compiled into a single binary making it fast and portable.
 
 ### Applications of Golang
 
