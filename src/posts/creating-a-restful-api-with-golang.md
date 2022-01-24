@@ -25,7 +25,9 @@ Although Golang was primarily developed by Google for their Google Cloud Plaform
 * Command-line tools
 * Data processing and Machine learning
 
-#### Initializing Go
+Getting started with Go is a simple endeavor. The following steps will get you started with your own Golang web server.
+
+### Initializing Go
 
 Create a directory for your shiny new Go project.
 
