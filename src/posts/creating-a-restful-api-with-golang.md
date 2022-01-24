@@ -1,7 +1,7 @@
 ---
 title: Creating a RESTful API with Golang
 description: Getting started with golang
-date: 2021-07-17T14:00:00Z
+date: 2021-07-17T14:00:00.000+00:00
 tags:
 - blog
 layout: layouts/post.njk
@@ -10,7 +10,9 @@ feature_image: img/golang.png
 ---
 ### Overview
 
-Golang from Google is what the cool kids are using nowadays. So to get in on the hype. Here's how to get started by building your own API.
+Golang from Google is an open-source programming language that works great for any applications above the Network layer. It's a statically typed language that feels similar to a dynamically typed language. Great thing about Golang is that it is compiled into a single binary making it fast and portable.
+
+### Applications of Golang
 
 #### Initializing Go
 
