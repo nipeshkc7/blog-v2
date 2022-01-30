@@ -32,8 +32,12 @@ First of all, we'll be organizing our project structure like this:
       |- template.yml
       |- BotHelper
           |-index.js
+          |-db.js
+          |-processMessages.js
 
-The `template.yml` will look like:
+Inside the BotHelper, `index.js` will be the entry point of the function, `db.js` will handle database CRUD operations and `processMesssages.js` will use regex to parse the input messages and process them accordingly.
+
+To deploy our AWS cloud infrastructure, we'll be using a YAML file that will contain the AWS Serverless Application Model (SAM) specifications. This template will tell AWS how to deploy our combination of resources including Lambda function, API Gateway, and DynamoDB. This `template.yml` will look like:
 
     AWSTemplateFormatVersion: '2010-09-09'
     Transform: AWS::Serverless-2016-10-31
