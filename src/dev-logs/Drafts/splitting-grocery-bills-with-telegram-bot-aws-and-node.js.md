@@ -220,6 +220,8 @@ Let's go through what happens here one step at a time:
 
 Note that we're using a positive `chatId` as the key. This is because we want to organize people by chat groups and since Telegram uses negative values for its chat groups we have to convert them into a positive values. 
 
+Since we're sending multiple requests with awaits, it is important that we change the default timeouts that Lambda provides by default (3 seconds) to something of a higher value like we did in our SAM template.
+
 ## Deploying to AWS
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
