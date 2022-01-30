@@ -119,6 +119,107 @@ Next, you need to create a telegram group with all the members including your bo
 
 Now for the fun part, we're going to program the bot so that it reads messages from the chat group where people will share how much they spent and on what. We will then take that chat message, and using regex store the `amount` text in our Dynamo DB database which will be our source of truth for who spent what. We will then return a message back to the user specifying who owes how much, and to whom.
 
+First we'll install all our dependencies:
+
+    npm i axios aws-sdk lodash
+
+Here's our main function `index.js`
+
+    const axios = require('axios');
+    const { processMessage } = require('./processMessage');
+    const { get, upsert } = require('./db');
+    
+    async function addMembers(chatId, message) {
+        const newChatMembers = message.new_chat_members;
+        const group = await get(Math.abs(chatId).toString());
+        const people = group?.people ??
+            (message.from.is_bot === true ?
+                {} : { [message.from.first_name]: { id: message.from.id, spent: 0, owes: {} } }
+            );
+    
+        newChatMembers.forEach(member => {
+            if (!people[member.first_name]) {
+                people[member.first_name] = {
+                    id: member.id,
+                    spent: 0,
+                    owes: {}
+                }
+            }
+        });
+    
+        await upsert(Math.abs(chatId).toString(), { people: people });
+    }
+    
+    exports.handler = async (event) => {
+    
+        const body = JSON.parse(event.body);
+    
+        if (body.message?.new_chat_members?.length) {
+            await addMembers(body.message.chat.id, body.message);
+            return {
+                statusCode: 200,
+                body: JSON.stringify('OK')
+            }
+        }
+    
+        if (!body.message?.text) {
+            return {
+                statusCode: 200,
+                body: JSON.stringify('Nothing to do')
+            }
+        }
+    
+        const group = await get(Math.abs(body.message.chat.id).toString());
+    
+        if(!group) {
+            return {
+                statusCode: 200,
+                body: JSON.stringify('No group found')
+            }
+        }
+    
+        const processedMessage = processMessage(body.message, group.people);
+    
+        if(!processedMessage) {
+            return {
+                statusCode: 200,
+                body: JSON.stringify('Nothing to do')
+            }
+        }
+    
+        if(processedMessage?.peopleRecord){
+            await upsert(Math.abs(body.message.chat.id).toString(), {people: processedMessage.peopleRecord});
+        }
+    
+        try {
+            if (processedMessage.reply){
+                await axios.get(`https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage?chat_id=${body.message.chat.id}&text=${encodeURI(processedMessage.reply)}`)
+            }
+            if (processedMessage.gif) {
+                const gif = await axios.get(`https://g.tenor.com/v1/random?key=${process.env.TENOR_KEY}&q=${encodeURI(processedMessage.gif)}&limit=1`);
+                await axios.get(`https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendAnimation?chat_id=${body.message.chat.id}&animation=${encodeURI(gif.data.results[0].media[0].gif.url)}`)
+            }
+        } catch (e) {
+            console.error('Error sending message', e);
+            await axios.get(`https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage?chat_id=${body.message.chat.id}&text=${encodeURI('Problems with the server !')}`)
+            // Optional: Throw error so Telegram webhook will retry
+        }
+    
+        return {
+            statusCode: 200,
+            body: JSON.stringify('OK')
+        };
+    
+    };
+
+Let's go through what happens here one step at a time:
+
+* The main handler gets the event from the Telegram servers.
+* The program checks if the event has any new chat members, if so it will add any new members to the existing group including the invitee if they're not already added yet in the `addMembers` function. 
+* If the event has an incoming message, then the program processes the message accordingly and returns a reply, updated records, and optionally a gif. We can update the existing records, and reply to the chat using a simple message and a gif (which can be done by a simple call to the [TENOR API](https://tenor.com/gifapi/documentation "Tenor gif")). 
+
+Note that we're using a positive `chatId` as the key. This is because we want to organize people by chat groups and since Telegram uses negative values for its chat groups we have to convert them into a positive values. 
+
 ## Deploying to AWS
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
