@@ -22,7 +22,7 @@ The main parts of the architecture will be:
 * DynamoDB: To Store / keep track of the amount owed by each person.
 * API Gateway: As the name suggests, an API pathway to interface with the lambda function. Lambda by default does not generate an API that can be invoked.
 
-## Deploying to AWS using SAM
+## Defining AWS resources using SAM
 
 We'll deploy our resources to AWS using `SAM` command-line tool, which lets us build, test, and deploy our AWS resources using either a guided method or by manually specifying the resource template. In practical scenarios, most organizations use a resource template for deploying their resources. So we'll be using this method as this will prove more beneficial for those with already a basic knowledge of the cloud. If you want a beginner-friendly guide to deployments, AWS has an awesome guide: [https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html").
 
@@ -89,8 +89,37 @@ To deploy our AWS cloud infrastructure, we'll be using a YAML file that will con
 In the YAML file we define these resources:
 
 * **TelegramBot**: Our Lambda function with Node 14 runtime, the handler file. Also, we specify the timeout as 60 seconds. This is important to note since by default the timeout in serverless functions is 3 seconds which isn't enough for the operations we'll be performing. We also add environment variables like `TABLE_NAME` which is our DynamoDB table name. We also add policies that allow the function to make updates to the database. Optionally, we can limit the concurrency using the `ReservedConcurrentExecutions` property which by default is 1000. The function will be triggered by a POST API endpoint `/message` which we define in the file using the `Events` property.
+* **API Gateway:** This gateway will trigger the Lambda function so we must explicitly provide a function invoke permission (`lambda:InvokeFunction`) which in the above file is called `TelegramBotInvokePermission`
 * **PeopleRecords:** The DynamoDB will act as our store which will have a primary key called `id` which will be used to uniquely identify our resource. You can also explicitly specify properties like read/write capacities to 5 consistent reads/writes per second.
-* 
+
+## Setting Up a telegram bot
+
+To set up a telegram bot, well, there's a bot for that. It's called Botfather (get it?). You can access Botfather via [https://telegram.me/BotFather](https://telegram.me/BotFather "https://telegram.me/BotFather"). There you can use commands to create your bot.
+
+Your interactions should look something like this:
+
+<screenshot>
+
+At the end of the process, you should get a unique **secret** **token** that you will use to communicate with the bot. A full list of commands accepted by the bot can be found at [https://core.telegram.org/bots/api](https://core.telegram.org/bots/api "https://core.telegram.org/bots/api"). We'll be communicating via HTTP requests.
+
+Now we'll need to specify the webhook for the bot. This is basically asking Telegram to call our Lambda function with bot related events. We're more interested in the group chat messages. We can set up our webhook using the following curl command:
+
+    curl --request POST \
+    --url https://api.telegram.org/bot<TELEGRAM_TOKEN>/setWebhook\
+    --header 'content-type: application/json'\
+    --data '{"url": "<LINK_TO_YOUR_LAMBDA_API>"}'
+
+Additionally, you might need to set your bot's privacy credentials using `/BotFather` . This will enable us to read group messages. For this, use the command `/setprivacy`:
+
+<screenshot>
+
+Next, you need to create a telegram group with all the members including your bot. And using our lambda function, we'll receive all the chat messages via the webhook.
+
+## Programming the bot
+
+Now for the fun part, we're going to program the bot so that it reads messages from the chat group where people will share how much they spent and on what. We will then take that chat message, and using regex store the `amount` text in our Dynamo DB database which will be our source of truth for who spent what. We will then return a message back to the user specifying who owes how much, and to whom.
+
+## Deploying to AWS
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
 
@@ -138,30 +167,3 @@ Since you'll probably be packaging and deploying it together, to save us some ti
     alias deployx='sam package --template-file template.yml --output-template-file package.yml --s3-bucket telegram-bot-deployement-bucket --region ap-southeast-2'
 
 So next time you can deploy using `deployx`
-
-## Setting Up a telegram bot
-
-To set up a telegram bot, well, there's a bot for that. It's called Botfather (get it?). You can access Botfather via [https://telegram.me/BotFather](https://telegram.me/BotFather "https://telegram.me/BotFather"). There you can use commands to create your bot.
-
-Your interactions should look something like this:
-
-<screenshot>
-
-At the end of the process, you should get a unique **secret** **token** that you will use to communicate with the bot. A full list of commands accepted by the bot can be found at [https://core.telegram.org/bots/api](https://core.telegram.org/bots/api "https://core.telegram.org/bots/api"). We'll be communicating via HTTP requests.
-
-Now we'll need to specify the webhook for the bot. This is basically asking Telegram to call our Lambda function with bot related events. We're more interested in the group chat messages. We can set up our webhook using the following curl command:
-
-    curl --request POST \
-    --url https://api.telegram.org/bot<TELEGRAM_TOKEN>/setWebhook\
-    --header 'content-type: application/json'\
-    --data '{"url": "<LINK_TO_YOUR_LAMBDA_API>"}'
-
-Additionally, you might need to set your bot's privacy credentials using `/BotFather` . This will enable us to read group messages. For this, use the command `/setprivacy`:
-
-<screenshot>
-
-Next, you need to create a telegram group with all the members including your bot. And using our lambda function, we'll receive all the chat messages via the webhook.
-
-## Programming the bot
-
-Now for the fun part, we're going to program the bot so that it reads messages from the chat group where people will share how much they spent and on what. We will then take that chat message, and using regex store the `amount` text in our Dynamo DB database which will be our source of truth for who spent what. We will then return a message back to the user specifying who owes how much, and to whom.
