@@ -18,7 +18,7 @@ Although there are plenty of existing apps and services that have tackled this p
 
 The main parts of the architecture will be:
 
-* AWS Lambda function: To process and send messages to telegram via the bot's API
+* AWS Lambda function: To receive, process and send messages to telegram via the bot's API
 * DynamoDB: To Store / keep track of the amount owed by each person.
 * API Gateway: As the name suggests, an API pathway to interface with the lambda function. Lambda by default does not generate an API that can be invoked.
 
