@@ -12,7 +12,7 @@ Splitting bills and payments between housemates can be a touchy subject. Debates
 
 ## Existing solutions
 
-Although there are plenty of existing apps and services that have tackled this particular problem, I'm afraid that they've grown and become so complicated that frankly just splitting grocery bills can seem like you're rewiring a supercomputer. So for the sake of simplicity, our solution will simply consist of a telegram chat group, a serverless function, and a database running on AWS.
+Although there are plenty of existing apps and services that have tackled this particular problem, I'm afraid that they've grown to become so complicated that frankly just splitting grocery bills can seem like you're rewiring a supercomputer. So for the sake of simplicity, our solution will simply consist of a telegram chat group, a serverless function, and a database running on AWS.
 
 ## Architecture
 
