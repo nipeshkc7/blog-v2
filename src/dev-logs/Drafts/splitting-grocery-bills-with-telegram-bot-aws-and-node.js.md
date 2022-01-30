@@ -39,15 +39,22 @@ Inside the BotHelper, `index.js` will be the entry point of the function, `db.js
 
 To deploy our AWS cloud infrastructure, we'll be using a YAML file that will contain the AWS Serverless Application Model (SAM) specifications. This template will tell AWS how to deploy our combination of resources including Lambda function, API Gateway, and DynamoDB. This `template.yml` will look like:
 
-    AWSTemplateFormatVersion: '2010-09-09'
+    AWSTemplateFormatVersion: "2010-09-09"
     Transform: AWS::Serverless-2016-10-31
-    Description: A serverless function that listens to incoming webhooks from the Telegram Server 
+    Description: A serverless function that listens to incoming webhooks from the Telegram Server
     Resources:
-      TelegramBotServer:
+      TelegramBot:
         Type: AWS::Serverless::Function
         Properties:
-          Handler:  BotHelper/index.handler
+          Handler: BotHelper/index.handler
           Runtime: nodejs14.x
+          Timeout: 60 
+          Environment:
+            Variables:
+              TABLE_NAME: People
+          Policies:
+            - DynamoDBCrudPolicy:
+                TableName: People
           Events:
             TelegramServiceAPI:
               Type: Api
@@ -60,11 +67,30 @@ To deploy our AWS cloud infrastructure, we'll be using a YAML file that will con
           Action: lambda:InvokeFunction
           FunctionName:
             Fn::GetAtt:
-            - BotHelper 
-            - Arn
+              - TelegramBot
+              - Arn
           Principal: apigateway.amazonaws.com
           SourceArn:
             Fn::Sub: arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:*/*/*/*
+      PeopleRecords:
+        Type: AWS::DynamoDB::Table
+        Properties:
+          TableName: People
+          AttributeDefinitions:
+            - AttributeName: id
+              AttributeType: S
+          KeySchema:
+            - AttributeName: id
+              KeyType: HASH
+          ProvisionedThroughput:
+            ReadCapacityUnits: 5
+            WriteCapacityUnits: 5
+
+In the YAML file we define these resources:
+
+* **TelegramBot**: Our Lambda function with Node 14 runtime, the handler file. Also, we specify the timeout as 60 seconds. This is important to note since by default the timeout in serverless functions is 3 seconds which isn't enough for the operations we'll be performing. We also add environment variables like `TABLE_NAME` which is our DynamoDB table name. We also add policies that allow the function to make updates to the database. Optionally, we can limit the concurrency using the `ReservedConcurrentExecutions` property which by default is 1000. The function will be triggered by a POST API endpoint `/message` which we define in the file using the `Events` property.
+* **PeopleRecords:** The DynamoDB will act as our store which will have a primary key called `id` which will be used to uniquely identify our resource. You can also explicitly specify properties like read/write capacities to 5 consistent reads/writes per second.
+* 
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
 
