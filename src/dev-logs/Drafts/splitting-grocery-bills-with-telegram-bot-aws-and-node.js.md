@@ -222,6 +222,40 @@ Note that we're using a positive `chatId` as the key. This is because we want to
 
 Since we're sending multiple requests with awaits, it is important that we change the default timeouts that Lambda provides by default (3 seconds) to something of a higher value like we did in our SAM template.
 
+Our `db.js` will handle our CRUD operations (in this case CRU operation) by using the `aws-sdk` library.
+
+    const AWS = require('aws-sdk');
+    const docClient = new AWS.DynamoDB.DocumentClient();
+    const tableName = process.env.TABLE_NAME;
+    
+    async function get(id) {
+        const data = await docClient.get({
+            TableName: tableName,
+            Key: {
+                'id': id
+            }
+        }).promise();
+    
+        return data.Item;
+    }
+    
+    async function upsert(id, item) {
+        await docClient.put({
+            TableName: tableName,
+            Item: {
+                ...item,
+                id: id,
+            }
+        }).promise();
+    }
+    
+    module.exports = {
+        get,
+        upsert
+    }
+
+Although omitted for the sake of brevity, it is crucial that there is proper error handling in cases of database operations.
+
 ## Deploying to AWS
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
