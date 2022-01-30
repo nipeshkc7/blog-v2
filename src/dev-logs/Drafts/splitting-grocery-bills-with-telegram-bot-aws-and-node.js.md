@@ -359,6 +359,10 @@ Now the main part of our application is the `processMessage` function which will
 
 This function uses regex to check for key phrases like `tbot i spent 100 dollars on food` this will automatically divide the 100 dollars between members of the group using the `divideBills()` function which divides the 100 dollars equally between the members and the `balanceBills()` function which will then rebalance balance everything so that person A does not need to pay person B if person B owes more money.
 
+Other phrases available are `tbot i cleared my bills` which will clear the existing owed balance and `tbot how much do i owe` which shows the message sender's owing balance.
+
+Finally, some [unit tests](https://github.com/nipeshkc7/jesus-telegram-bot/blob/main/__tests__/processMessage.test.js "Unit tests") are never a bad idea.
+
 ## Deploying to AWS
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
