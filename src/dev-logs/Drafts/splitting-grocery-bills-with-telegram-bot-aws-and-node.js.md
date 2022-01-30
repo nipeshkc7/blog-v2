@@ -256,6 +256,109 @@ Our `db.js` will handle our CRUD operations (in this case CRU operation) by usin
 
 Although omitted for the sake of brevity, it is crucial that there is proper error handling in cases of database operations.
 
+Now the main part of our application is the `processMessage` function which will do the actual bill dividing tasks.
+
+    const _ = require('lodash');
+    
+    function divideBills(purchase, peopleRecord) {
+        let people = { ...peopleRecord };
+    
+        if(!people[purchase.spender]) {
+            people[purchase.spender] = {spent: 0, owes: {}};
+        }
+    
+        let peopleNames = Object.keys(people);
+        peopleNames.forEach(person => {
+            if (person === purchase.spender) {
+                people[person].spent = people[person].spent + purchase.amount;
+            } else {
+                people[person].owes[purchase.spender] = (people[person].owes[purchase.spender] ? people[person].owes[purchase.spender] : 0) + _.round((purchase.amount / peopleNames.length), 2);
+                people[person].owes = people[person].owes ? people[person].owes : {};
+            }
+        })
+        return people;
+    }
+    
+    function balanceBills(peopleRecord) {
+        let people = { ...peopleRecord };
+        let peopleNames = Object.keys(people);
+        peopleNames.forEach(person => {
+            const personOwes = Object.keys(people[person].owes);
+            personOwes.forEach(personOwed => {
+                if (people[person].owes[personOwed] === 0) {
+                    return;
+                }
+                if (people[person].owes[personOwed] >= people[personOwed].owes[person]) {
+                    people[person].owes[personOwed] = people[person].owes[personOwed] - people[personOwed].owes[person];
+                    people[personOwed].owes[person] = 0;
+                } else if (people[personOwed].owes[person] > people[person].owes[personOwed]) {
+                    people[personOwed].owes[person] = people[personOwed].owes[person] - people[person].owes[personOwed];
+                    people[person].owes[personOwed] = 0;
+                }
+            })
+        })
+        return people;
+    }
+    
+    function clearBills(peopleRecord, person) {
+        let people = { ...peopleRecord };
+        people[person].owes = {};
+        return people;
+    }
+    
+    function getOwed(people, person) {
+        if(Object.keys(people[person].owes).length === 0) {
+            return `You owe nobody. ${person} is free.`;
+        }
+    
+        let msg = `${person} owes:`;
+        Object.keys(people[person].owes).forEach(personOwed => {
+            msg += `${personOwed} ${people[person].owes[personOwed]} dollars,`;
+        });
+        return msg;
+    }
+    
+    function processMessage(message, people) {
+        if(!message.from.first_name) throw new Error('no user');
+        if(!message.text) throw new Error('no text message');
+        const messageText = message.text;
+    
+        //Example message: "tbot is spent 100 dollars on food"
+        if(/tbot\si\sspent\s(\d+((.)|(.\d{0,2})?))\sdollars\son.+/gmi.exec(messageText)?.length) {
+            const amountSpent = /jesus\si\sspent\s(\d+((.)|(.\d{0,2})?))\sdollars\son.+/gmi.exec(messageText)[1];
+            const peopleRecord = balanceBills(divideBills({ spender: message.from.first_name, amount: Number(amountSpent) }, people));
+            return {
+                peopleRecord,
+                reply: `${message.from.first_name} spent ${amountSpent} dollars, and everyone else owes ${message.from.first_name}, ${_.round((Number(amountSpent) / Object.keys(peopleRecord).length), 2)} dollars.`,
+            }
+        }
+    
+        //Example message: "tbot i cleared my bills"
+        if(/tbot\si\scleared\smy\sbills/gmi.exec(messageText)?.length) {
+            const peopleRecord = clearBills(people, message.from.first_name);
+            return {
+                peopleRecord,
+                reply: `${message.from.first_name} cleared their bills.`,
+                gif: 'hurray'
+            }
+        }
+    
+        //Example message: "tbot how much do i owe"
+        if(/tbot\show\smuch\sdo\si\sowe?.+/gmi.exec(messageText)?.length) {
+            const msg = getOwed(people, message.from.first_name);
+            return {
+                people,
+                reply: msg,
+            }
+        }
+    }
+    
+    module.exports = {
+        processMessage,
+    }
+
+This function uses regex to check for key phrases like `tbot i spent 100 dollars on food` this will automatically divide the 100 dollars between members of the group using the `divideBills()` function which divides the 100 dollars equally between the members and the `balanceBills()` function which will then rebalance balance everything so that person A does not need to pay person B if person B owes more money.
+
 ## Deploying to AWS
 
 Before we start using deploy commands, we'll need to set up some configurations in our local environment. The following environment variables should be present before using the deploy commands:
