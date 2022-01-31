@@ -215,10 +215,10 @@ Here's our main function `index.js`
 Let's go through what happens here one step at a time:
 
 * The main handler gets the event from the Telegram servers.
-* The program checks if the event has any new chat members, if so it will add any new members to the existing group including the invitee if they're not already added yet in the `addMembers` function. 
-* If the event has an incoming message, then the program processes the message accordingly and returns a reply, updated records, and optionally a gif. We can update the existing records, and reply to the chat using a simple message and a gif (which can be done by a simple call to the [TENOR API](https://tenor.com/gifapi/documentation "Tenor gif")). 
+* The program checks if the event has any new chat members, if so it will add any new members to the existing group including the invitee if they're not already added yet in the `addMembers` function.
+* If the event has an incoming message, then the program processes the message accordingly and returns a reply, updated records, and optionally a gif. We can update the existing records, and reply to the chat using a simple message and a gif (which can be done by a simple call to the [TENOR API](https://tenor.com/gifapi/documentation "Tenor gif")).
 
-Note that we're using a positive `chatId` as the key. This is because we want to organize people by chat groups and since Telegram uses negative values for its chat groups we have to convert them into a positive values. 
+Note that we're using a positive `chatId` as the key. This is because we want to organize people by chat groups and since Telegram uses negative values for its chat groups we have to convert them into a positive values.
 
 Since we're sending multiple requests with awaits, it is important that we change the default timeouts that Lambda provides by default (3 seconds) to something of a higher value like we did in our SAM template.
 
@@ -411,3 +411,13 @@ Since you'll probably be packaging and deploying it together, to save us some ti
     alias deployx='sam package --template-file template.yml --output-template-file package.yml --s3-bucket telegram-bot-deployement-bucket --region ap-southeast-2'
 
 So next time you can deploy using `deployx`
+
+### Testing the bot
+
+To test the bot, simply create a group with your bot and start adding members to the group. The interactions should then look like this:
+
+<Screenshot>
+
+### Source Code
+
+The source code for this tutorial is available at [https://github.com/nipeshkc7/jesus-telegram-bot](https://github.com/nipeshkc7/jesus-telegram-bot "https://github.com/nipeshkc7/jesus-telegram-bot"). Feel free to clone the repository and deploy your own instance to AWS.
