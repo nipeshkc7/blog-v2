@@ -100,6 +100,10 @@ module.exports = function (config) {
     collection = collection.getFilteredByGlob("src/posts/*.md");
     collection.forEach(post => {
       post.primary_author = { ...author };
+
+      const numberOfWords = post.template.frontMatter.content.split(/\s/g).length;
+      post.data.reading_time = Math.ceil(numberOfWords / 200);
+
       if (!post.data.feature_image) {
         post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
       } else {
