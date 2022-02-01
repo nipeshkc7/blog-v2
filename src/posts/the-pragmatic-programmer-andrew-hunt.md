@@ -8,6 +8,8 @@ layout: layouts/post.njk
 feature_image: img/pragmatic.png
 
 ---
+`The Pragmatic Programmer` by Andrew Hunt and Dave Thomas is one of the best books a software engineer can read especially in their early years. It contains useful analogies, anecdotes, and examples that help you have better mental models when writing and developing software.
+
 These are some of the important topics and highlights that stood out to me from `The Pragmatic Programmer`
 
 ### Software Entropy:
