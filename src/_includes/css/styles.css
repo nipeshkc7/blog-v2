@@ -585,7 +585,7 @@ h6 {
 }
 
 .content-title {
-  margin: 0 0 0.8em;
+  margin: 0 0 0.4em;
   font-size: 5rem;
 }
 @media (max-width: 500px) {
@@ -1193,4 +1193,5 @@ h6 {
   color: var(--color-secondary);
   font-weight: 400;
   margin-left: 0.5rem;
+  margin-bottom: 0.4em;
 }
