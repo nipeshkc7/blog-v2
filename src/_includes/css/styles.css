@@ -1183,3 +1183,14 @@ h6 {
 .kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
     margin: -2.25em 0 3em;
 }
+
+/* Custom Styles
+/* ---------------------------------------------------------- */
+
+.subtext{
+  text-align:right;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
