@@ -6,6 +6,7 @@ tags:
 - blog
 layout: layouts/post.njk
 feature_image: img/golang.png
+featured: 1
 
 ---
 ### Overview
