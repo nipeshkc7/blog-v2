@@ -15,18 +15,18 @@ _This blog post was originally posted on_ [_dev.to_](dev.to)
 
 With all the async awaits, promises, `.then` and all the other JS-specific stuff, doing even simple tasks in Javascript can feel overwhelming for beginner backend developers.
 
-To preface, I'm currently working on my own application which is a simple Match betting tracker to keep track of my bets, and decided to add OAuth authentication in the app to let users log in from their Gmail account. 
+To preface, I'm currently working on my own application which is a simple Match betting tracker to keep track of my bets, and decided to add OAuth authentication in the app to let users log in from their Gmail account.
 
 The first thing I did was set up an account in Google console, and got me some shiny new credentials (client ID and client Secret) for OAuth 2.0.
 
-Initially, I had trouble getting my head around the authentication flow with all the tokens and secrets. But upon deeper inspection, it was quite simple actually, and started to appreciate how google makes the process so simple and dare I say, elegant.
+Understanding the authentication flow with all the tokens and secrets can seem daunting. So this quick guide will show you that it is quite simple, and help you get started with OAuth 2 authentication in your own app.
 
-The first thing I did was get the Google API:
+The first thing you need to do is get the Google API npm package:
 
       npm install googleapis
 
 In the actual program:  
-initialized the API library and set up google config.
+Initialize the API library and set up google config.
 
     const { google } = require('googleapis');
     const oauth2 = google.oauth2('v2');
@@ -37,7 +37,7 @@ initialized the API library and set up google config.
         process.env.GOOGLE_REDIRECT, // this must match your google api settings
     );
 
-So basically all I had to do was these 3 things:
+So basically all you have to do are these three things:
 
 1. get a Redirect url for the clients
 2. The url also contains a code which then I use to get a token ( if the user signs in to their Google account that is)
