@@ -103,6 +103,7 @@ module.exports = function (config) {
 
       const numberOfWords = post.template.frontMatter.content.split(/\s/g).length;
       post.data.reading_time = Math.ceil(numberOfWords / 200);
+      post.data.date_string = new Date(post.data.date).toDateString();
 
       if (!post.data.feature_image) {
         post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
@@ -140,6 +141,9 @@ module.exports = function (config) {
     collection = collection.getFilteredByGlob("src/dev-logs/*.md");
     collection.forEach(post => {
       post.primary_author = { ...author };
+      const numberOfWords = post.template.frontMatter.content.split(/\s/g).length;
+      post.data.reading_time = Math.ceil(numberOfWords / 200);
+      post.data.date_string = new Date(post.data.date).toDateString();
       if (!post.data.feature_image) {
         post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
       } else {
