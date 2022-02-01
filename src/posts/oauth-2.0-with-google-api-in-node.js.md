@@ -68,14 +68,6 @@ Step 2 and 3:
             })
     }
 
-And so in the main program , I got a connection URL using getConnectionUrl() which then gave me the code in the URL which I passed on to `getUserDetails()` to get the user details.
-
-So this is how I got OAuth authentication working in my application.
-
-If you want to check out my repo, here's the link :
-
-* [Matched-betting-tracker](https://github.com/nipeshkc7/matched-betting-tracker)
-
 **_UPDATE_**
 
 Using async-await steps 2 and 3 can be reduced to::
@@ -88,3 +80,13 @@ Using async-await steps 2 and 3 can be reduced to::
      } 
 
 This looks cleaner and async-await is a lot more intuitive to use.
+
+And so in the main program , we get the connection URL using `getConnectionUrl()` which then gives you the code in the URL which I passed on to `getUserDetails()` to get the user details.
+
+So this is how I got OAuth authentication working in my application.
+
+Check out the full repo at:
+
+* [Matched-betting-tracker](https://github.com/nipeshkc7/matched-betting-tracker)
+
+Thanks for reading!
