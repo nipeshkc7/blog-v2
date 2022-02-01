@@ -111,6 +111,8 @@ module.exports = function (config) {
         post.data.feature_image = `${BASE_URL}/${post.data.feature_image}`
       }
     })
+    collection.sort((post, nextPost) => Date.parse(nextPost.data.date) - Date.parse(post.data.date));
+    collection.sort((post, nextPost) => (nextPost.data.featured ?? 0) - (post.data.featured ?? 0));
     return collection;
     // collection = await api.posts
     //   .browse({
