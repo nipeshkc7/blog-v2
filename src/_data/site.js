@@ -18,8 +18,8 @@ module.exports = async function () {
       { label: 'Dev Logs', url: '/dev-logs/' },
       { label: 'About', url: '/posts/welcome/' },
       {
-        label: 'Repo',
-        url: 'https://github.com/nipeshkc7/blog-v2'
+        label: 'Newsletter',
+        url: 'https://newsletter.arpankc.com'
       },
       //{ label: 'Author', url: '/author/ghost/' },
       //{ label: 'Help', url: 'https://docs.ghost.org' }
