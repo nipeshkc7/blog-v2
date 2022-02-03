@@ -8,7 +8,7 @@ module.exports = async function () {
     logo: 'https://arpankc.com/img/download.png',
     icon: 'https://arpankc.com/img/icon.png',
     cover_image: 'https://static.ghost.org/v1.0.0/images/blog-cover.jpg',
-    twitter: '@nipeshkc7',
+    twitter: '@arpnkc',
     stack_overflow: "users/6470513/arpan-kc",
     github: "nipeshkc7",
     dev: "nipeshkc7",

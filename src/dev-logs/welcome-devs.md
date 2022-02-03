@@ -37,4 +37,4 @@ You can find me in other places where I write blog posts or contribute like:
 
 ### Contact
 
-You can reach out to me via email: [arpnkc@gmail.com](arpnkc@gmail.com "email address"), message me on [Linkedin](https://www.linkedin.com/in/arpan-kc7/ "Arpan Linkedin"), or find me on Twitter [@nipeshkc7](https://twitter.com/nipeshkc7 "arpan twitter").
+You can reach out to me via email: [arpnkc@gmail.com](arpnkc@gmail.com "email address"), message me on [Linkedin](https://www.linkedin.com/in/arpan-kc7/ "Arpan Linkedin"), or find me on Twitter [@arpnkc](https://twitter.com/arpnkc "arpan twitter").
