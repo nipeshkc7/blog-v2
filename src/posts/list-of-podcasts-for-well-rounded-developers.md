@@ -1,5 +1,5 @@
 ---
-title: Podcasts for Developers
+title: Best Podcasts for Software Engineers
 description: List of Podcasts related to Software development and personal finances.
 date: 2021-08-28T14:00:00.000+00:00
 tags:
@@ -8,7 +8,7 @@ layout: layouts/post.njk
 feature_image: img/podcast.jpeg
 
 ---
-This is a list of podcasts that I listen to every day, sorted by genre:
+Podcasts are the best things to happen to mankind since sliced bread. You can listen to them anytime, anyplace, and in some cases without an internet connection. 
 
 ### Software Engineering:
 
