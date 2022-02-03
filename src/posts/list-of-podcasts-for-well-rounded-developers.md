@@ -20,7 +20,7 @@ Podcasts are the best things to happen to mankind since sliced bread. You can li
 
 * [Startups for the rest of us](https://www.startupsfortherestofus.com/ "Startups for the rest of us") : If you've ever remotely thought about starting your own tech business or a SAAS company, this will be a treat. Experienced entrepreneur Rob Walling shares his experiences from his days of Drip, the emailing service. If you've not started listening to this one yet, you should. You'll love all 500+ episodes of it.
 * [Indie Hacker](https://www.indiehackers.com/ "Indie hackers"): Another inspirational podcast, Courtland Allen interviews different entrepreneurs and uncovers their backstory and their thought processes to gain insight on what makes an entrepreneur. 
-* Rework by Basecamp
+* [Rework by Basecamp](https://www.rework.fm/ "Rework"): Rework is a software company that has gained notoriety among Engineers for their unorthodox approaches to products and software engineering practices in general. The creators of Hey, discuss their popular book, Shape Up in a series of episodes. They deep dive into each chapter providing different ideas and challenging the status quo on how software development is approached.
 
 ### Finance
 
