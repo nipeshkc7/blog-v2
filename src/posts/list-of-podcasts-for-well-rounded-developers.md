@@ -1,5 +1,5 @@
 ---
-title: Podcasts for Well Rounded Developers
+title: Podcasts for Developers
 description: List of Podcasts related to Software development and personal finances.
 date: 2021-08-28T14:00:00.000+00:00
 tags:
