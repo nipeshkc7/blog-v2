@@ -8,7 +8,7 @@ layout: layouts/post.njk
 feature_image: img/podcast.jpeg
 
 ---
-Podcasts are the best things to happen to mankind since sliced bread. You can listen to them anytime, anyplace, and in some cases without an internet connection. 
+Podcasts are the best things to happen to mankind since sliced bread. You can listen to them anytime, anyplace, and in some cases without an internet connection. The selection of genres and niches is countless. There's something for everyone. Here's a list of my personal favorites.
 
 ### Software Engineering:
 
