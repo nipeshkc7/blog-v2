@@ -12,7 +12,7 @@ This is a list of podcasts that I listen to every day, sorted by genre:
 
 ### Software Engineering:
 
-*  Soft Skills Engineering
+* [https://softskills.audio/](https://softskills.audio/ "https://softskills.audio/"): Softkills Engineering is a great listen, featuring experienced engineers and witty duo, Dave Smith and Jamison Dance, with their patented `Quit your job` advice. They talk about the non-technical side of software engineering including, but not limited to topics like negotiating pay raises, getting promoted and general workplace etiquette.
 * Command Line Heroes
 * JS Party
 
