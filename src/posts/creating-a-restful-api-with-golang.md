@@ -6,7 +6,7 @@ tags:
 - blog
 layout: layouts/post.njk
 feature_image: img/golang.png
-featured: 1
+featured: "1"
 
 ---
 ### Overview
@@ -86,6 +86,19 @@ Create a `main.go` file and add the following code:
     	fmt.Println("Starting Go Server !")
     	handleRequests()
     }
+
+Let's go through the code line by line:
+
+    package main
+    
+    import (
+    	"encoding/json"
+    	"fmt"
+    	"log"
+    	"net/http"
+    )
+
+The first line tells the compiler to execute this program. Then we import the packages we require including `encoding/json` for encoding and decoding JSON objects, `fmt` for I/O, `log` for logging purposes and `net/http` will help set up our HTTP server.
 
 Then simply use this command to run the app:
 
