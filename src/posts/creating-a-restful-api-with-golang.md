@@ -58,10 +58,10 @@ Create a `main.go` file and add the following code:
     }
     
     var events = []Event{
-    	Event{Id: "111", Name: "birthday", Desc: "jimmy's birthday", PhoneNumber: "+61416918059"},
-    	Event{Id: "112", Name: "anniversary", Desc: "jimmy's anniversary", PhoneNumber: "+61416918059"},
-    	Event{Id: "113", Name: "xmas", Desc: "Xmas", PhoneNumber: "+61416918059"},
-    	Event{Id: "114", Name: "custom", Desc: "custom event", PhoneNumber: "+61416918059"},
+    	Event{Id: "111", Name: "birthday", Desc: "jimmy's birthday", PhoneNumber: "+6141698059"},
+    	Event{Id: "112", Name: "anniversary", Desc: "jimmy's anniversary", PhoneNumber: "+6141612059"},
+    	Event{Id: "113", Name: "xmas", Desc: "Xmas", PhoneNumber: "+61416918123"},
+    	Event{Id: "114", Name: "custom", Desc: "custom event", PhoneNumber: "+6141691549"},
     }
     
     func ping(w http.ResponseWriter, r *http.Request) {
@@ -106,10 +106,10 @@ The first line tells the compiler to execute this program. Then we import the pa
     }
     
     var events = []Event{
-    	Event{Id: "111", Name: "birthday", Desc: "jimmy's birthday", PhoneNumber: "+61416918059"},
-    	Event{Id: "112", Name: "anniversary", Desc: "jimmy's anniversary", PhoneNumber: "+61416918059"},
-    	Event{Id: "113", Name: "xmas", Desc: "Xmas", PhoneNumber: "+61416918059"},
-    	Event{Id: "114", Name: "custom", Desc: "custom event", PhoneNumber: "+61416918059"},
+    	Event{Id: "111", Name: "birthday", Desc: "jimmy's birthday", PhoneNumber: "+6141698059"},
+    	Event{Id: "112", Name: "anniversary", Desc: "jimmy's anniversary", PhoneNumber: "+6141612059"},
+    	Event{Id: "113", Name: "xmas", Desc: "Xmas", PhoneNumber: "+61416918123"},
+    	Event{Id: "114", Name: "custom", Desc: "custom event", PhoneNumber: "+6141691549"},
     }
 
 Next, we define structs. For those familiar with C programming structs are a way of organizing data. Here we define the shape of our data consisting of a collection of string variables. Then we define an array of structs using the `[]` character. 
