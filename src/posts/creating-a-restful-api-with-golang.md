@@ -78,7 +78,7 @@ Create a `main.go` file and add the following code:
     
     func handleRequests() {
     	http.HandleFunc("/", ping)
-    	http.HandleFunc("/getAllEvents", getAllEvents)
+    	http.HandleFunc("/Events", getAllEvents)
     	log.Fatal(http.ListenAndServe(":8080", nil))
     }
     
@@ -100,11 +100,52 @@ Let's go through the code line by line:
 
 The first line tells the compiler to execute this program. Then we import the packages we require including `encoding/json` for encoding and decoding JSON objects, `fmt` for I/O, `log` for logging purposes and `net/http` will help set up our HTTP server.
 
-Then simply use this command to run the app:
+    type Event struct {
+    	Id          string `json:"id"`
+    	Name        string `json:"name"`
+    	Desc        string `json:"desc"`
+    	PhoneNumber string `json:"phoneNumber"`
+    }
+    
+    var events = []Event{
+    	Event{Id: "111", Name: "birthday", Desc: "jimmy's birthday", PhoneNumber: "+61416918059"},
+    	Event{Id: "112", Name: "anniversary", Desc: "jimmy's anniversary", PhoneNumber: "+61416918059"},
+    	Event{Id: "113", Name: "xmas", Desc: "Xmas", PhoneNumber: "+61416918059"},
+    	Event{Id: "114", Name: "custom", Desc: "custom event", PhoneNumber: "+61416918059"},
+    }
+
+Next, we define structs. For those familiar with C programming structs are a way of organizing data. Here we define the shape of our data consisting of a collection of string variables. Then we define an array of structs using the `[]` character. 
+
+    func ping(w http.ResponseWriter, r *http.Request) {
+    	fmt.Fprintf(w, "Server is running!")
+    	fmt.Println("pong")
+    }
+    
+    func getAllEvents(w http.ResponseWriter, r *http.Request) {
+    	fmt.Println("retrieving all events")
+    	json.NewEncoder(w).Encode(events)
+    }
+    
+    func handleRequests() {
+    	http.HandleFunc("/", ping)
+    	http.HandleFunc("/Events", getAllEvents)
+    	log.Fatal(http.ListenAndServe(":8080", nil))
+    }
+    
+    func main() {
+    	fmt.Println("Starting Go Server !")
+    	handleRequests()
+    }
+
+Now in our `main()` function which will be executed first, we call the `handleRequests` function which sets up two endpoints: `/` and `/getAllEvents` and attach the respective handler functions. Then, we can output the response using `json.NewEncoder()` function.
+
+After that, simply use this command to run the app:
 
 `go run .`
 
-And voila, there you have it. Your own Golang server.
+And voila, there you have it. Your Golang server should be running in the port specified (8080). 
+
+Thanks for reading!
 
 #### Few Notes
 
