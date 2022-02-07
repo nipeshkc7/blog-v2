@@ -74,8 +74,6 @@ Create a `main.go` file and add the following code:
     	json.NewEncoder(w).Encode(events)
     }
     
-    // TODO: Add APIS to send messages
-    
     func handleRequests() {
     	http.HandleFunc("/", ping)
     	http.HandleFunc("/Events", getAllEvents)
