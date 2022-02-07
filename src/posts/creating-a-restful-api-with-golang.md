@@ -135,7 +135,7 @@ Next, we define structs. For those familiar with C programming structs are a way
     	handleRequests()
     }
 
-Now in our `main()` function which will be executed first, we call the `handleRequests` function which sets up two endpoints: `/` and `/getAllEvents` and attach the respective handler functions. Then, we can output the response using `json.NewEncoder()` function.
+Now in our `main()` function which will be executed first, we call the `handleRequests` function which sets up two endpoints: `/` and `/getAllEvents` and attach the respective handler functions. Then, we can output a JSON response from our defined array of structs using `json.NewEncoder()` function.
 
 After that, simply use this command to run the app:
 
