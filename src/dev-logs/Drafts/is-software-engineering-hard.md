@@ -4,7 +4,7 @@ description: ''
 date: 2022-02-08T00:00:00.000+11:00
 tags: []
 layout: ''
-feature_image: ''
+feature_image: "/img/software-engineering-is-it-hard.png"
 
 ---
 **TLDR; No**
