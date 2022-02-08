@@ -15,7 +15,7 @@ Software Engineering is the field everyone wants to get into these days. Dependi
 
 ## How does one become a software engineer?
 
-The most common path for engineers has been to get a Computer Science degree from an institution of their choosing, where they learn about topics with the major ones including Data Structures and Algorithm, a programming language with basic concepts sprinkled in, problem-solving. And depending on the type of institution you're involved in, you will have ample opportunities to gain industry experience as many companies are very keen to reach out and hire interns directly from universities. A less traditional route, but seen more common post-2017,  would be to go through a Bootcamp that mostly focuses on teaching an industry favorite languages and web technologies like React to help students land a job.
+The most common path for engineers has been to get a Computer Science degree from an institution of their choosing, where they learn about topics with the major ones including Data Structures and Algorithm, a programming language with basic concepts sprinkled in, problem-solving. And depending on the type of institution you're involved in, you will have ample opportunities to gain industry experience as many companies are very keen to reach out and hire interns directly from universities. A less traditional route, but seen more common post-2017,  would be to go through a Bootcamp that mostly focuses on teaching an industry favorite languages and web technologies like React to help students land a job. And believe it or not, many people quit
 
 ## When it's hard?
 
