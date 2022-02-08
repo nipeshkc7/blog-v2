@@ -5,6 +5,13 @@ admin_path: "/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: ''
+  label: Drafts
+  create: all
+  match: src/posts/Drafts/*.md
+  templates:
+  - post
+- type: directory
   path: src/dev-logs
   label: Dev Logs
   create: all
