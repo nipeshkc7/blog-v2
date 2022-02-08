@@ -8,7 +8,7 @@ sections:
   path: ''
   label: Drafts
   create: all
-  match: src/posts/Drafts/*.md
+  match: src/dev-logs/Drafts/*.md
   templates:
   - post
 - type: directory
