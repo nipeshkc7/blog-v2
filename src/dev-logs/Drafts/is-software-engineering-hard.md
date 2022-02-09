@@ -19,7 +19,7 @@ The most common path for engineers has been to get a Computer Science degree fro
 
 ## The challenges
 
-A software engineer runs into challenges both when learning and working professionally. Some challenges during learning are:
+A software engineer runs into challenges both when learning and working professionally. Some challenges during the learning phase are:
 
 * Some concepts take time to grasp and much longer time to master such as Data Structures and Algorithm, Programming concepts, and in some cases mathematics. This might deter beginners in the early stages of a CS degree.
 
