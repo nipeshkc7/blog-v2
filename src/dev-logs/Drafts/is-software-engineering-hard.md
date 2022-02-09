@@ -7,7 +7,7 @@ layout: ''
 feature_image: "/img/software-engineering-is-it-hard.png"
 
 ---
-**TLDR; Short answer : No**
+**TLDR; Short answer - No**
 
 The long answer is a bit more complicated.
 
