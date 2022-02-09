@@ -17,9 +17,22 @@ Software Engineering is the field everyone wants to get into these days. Dependi
 
 The most common path for engineers has been to get a Computer Science degree from an institution of their choosing, where they learn about topics with the major ones including Data Structures and Algorithm, a programming language with basic concepts sprinkled in, problem-solving. And depending on the type of institution you're involved in, you will have ample opportunities to gain industry experience as many companies are very keen to reach out and hire interns directly from universities. A less traditional route, but seen more common post-2017,  would be to go through a Bootcamp that mostly focuses on teaching an industry favorite languages and web technologies like React to help students land a job. And believe it or not, many people quit halfway through the degree/course.
 
+## The challenges
+
+A software engineer runs into challenges both when learning and working professionally. Some challenges during learning are:
+
+* Some concepts take time to grasp and much longer time to master such as Data Structures and Algorithm, Programming concepts, and in some cases mathematics. This might deter beginners in the early stages of a CS degree.
+
+Other challenges might be encountered when working professionally which might include:
+
+* Learning never ends, there's always a new framework or tool that you might end up working with. This could be a good thing or a bad thing depending upon your level of curiosity.
+* Problem-solving gets hard if you don't enjoy the process. This is a software engineer's top tool in their toolbelt, if you don't enjoy solving technical problems by scouring through endless learning resources, then, in that case, you will much likely have a hard time as a Software Engineer.
+
 ## When it's hard?
 
 When you're not curious and love building stuff.
+
+Lack of communication skills
 
 ## When it's easy?
 
