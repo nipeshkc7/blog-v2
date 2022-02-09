@@ -7,7 +7,7 @@ layout: ''
 feature_image: "/img/software-engineering-is-it-hard.png"
 
 ---
-**TLDR; No**
+**TLDR; Short answer : No**
 
 The long answer is a bit more complicated.
 
@@ -28,16 +28,8 @@ Other challenges might be encountered when working professionally which might in
 * Learning never ends, there's always a new framework or tool that you might end up working with. This could be a good thing or a bad thing depending upon your level of curiosity.
 * Problem-solving gets hard if you don't enjoy the process. This is a software engineer's top tool in their toolbelt, if you don't enjoy solving technical problems by scouring through endless learning resources, then, in that case, you will much likely have a hard time as a Software Engineer.
 
-## When it's hard?
+## Conclusion
 
-When you're not curious and love building stuff.
+Short answer, it's hard when you're not curious enough about technology in general. Unless you care about problem-solving, are fascinated by cool and shiny tech, you will have a hard time as a software engineer. 
 
-Lack of communication skills
-
-## When it's easy?
-
-When you don't love problem-solving.
-
-## Not for you if?
-
-You don't enjoy digging into a problem and spending hours trying to solve it.
+On the other hand, if you're curious, love technology, enjoy problem-solving, and don't mind occasionally doing extra work to fix that pesky bug and enjoy it, then, believe me, this will be one of the easiest and the most rewarding things you've ever done.
