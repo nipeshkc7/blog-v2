@@ -1,14 +1,14 @@
 ---
 title: Working with Users, Groups and Permissions in Linux
 description: A quick guide to working with users and groups in linux
-date: 2021-11-19T13:00:00Z
+date: 2021-11-19T13:00:00.000+00:00
 tags:
 - blog
 layout: layouts/post.njk
 feature_image: "/img/jpeg"
 
 ---
-This is a quick guide to show you how to work with Users and Groups in Linux. Concepts will be similar across most distros as well on Macbooks.
+This is a quick guide to show you how to work with Users and Groups in Linux. Concepts will be similar across most distros as well on Macs since they're Unix-based.
 
 ## Users
 
