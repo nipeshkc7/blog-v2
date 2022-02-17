@@ -22,7 +22,6 @@ fields:
   label: feature_image
 pages:
 - src/dev-logs/Drafts/is-software-engineering-hard.md
-- src/dev-logs/Drafts/is-software-engineering-hard.md
 - src/dev-logs/Drafts/macos-automation-with-javascript.md
 - src/dev-logs/Drafts/macos-automation-with-javascript.md
 - src/dev-logs/Drafts/publishing-a-cli-tool-to-npm.md
