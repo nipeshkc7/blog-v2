@@ -1,5 +1,5 @@
 ---
-title: Best Podcasts for Well-Rounded Software Engineers
+title: Best Podcasts for Software Engineers
 description: List of Podcasts related to Software development and personal finances.
 date: 2021-08-28T14:00:00.000+00:00
 tags:
