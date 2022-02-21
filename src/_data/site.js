@@ -15,14 +15,11 @@ module.exports = async function () {
     medium: "@arpankc",
     navigation: [
       { label: 'Home', url: '/' },
-      //{ label: 'Dev Logs', url: '/dev-logs/' },
       { label: 'About', url: '/posts/welcome/' },
       {
         label: 'Newsletter',
         url: 'https://newsletter.arpankc.com'
       },
-      //{ label: 'Author', url: '/author/ghost/' },
-      //{ label: 'Help', url: 'https://docs.ghost.org' }
     ],
     secondary_navigation: [],
     meta_title: null,
