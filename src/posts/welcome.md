@@ -27,7 +27,7 @@ In my day-to-day, I build full-stack solutions and work with different kinds of 
 
 ### How this blog will be organized
 
-While I strive to write longer form, in-depth articles, which will be featured on the main page. I also have a section that I named `dev logs` where I simply jot down some notes and gotchas I've encountered during my hair-pulling debugging sessions. I refer to these pieces from time to time and I feel like they will be helpful for other software engineers alike.
+While I strive to write longer form, in-depth articles, which will be featured on the main page. There will be smaller pieces of content from time to time which will also show up on the main feed.
 
 ### Find Me in other places:
 
