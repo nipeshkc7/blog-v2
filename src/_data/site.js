@@ -30,7 +30,7 @@ module.exports = async function () {
     twitter_image: null,
     twitter_title: null,
     twitter_description: null,
-    members_support_address: 'noreply@eleventy.ghost.io',
+    members_support_address: 'arpnkc@gmail.com',
     url: process.env.ELEVENTY_ENV === "prod" ? "https://blog.arpankc.com" : "http://localhost:8080",
     ghost_head: null,
     ghost_foot: null,
