@@ -114,45 +114,6 @@ module.exports = function (config) {
     collection.sort((post, nextPost) => Date.parse(nextPost.data.date) - Date.parse(post.data.date));
     collection.sort((post, nextPost) => (nextPost.data.featured ?? 0) - (post.data.featured ?? 0));
     return collection;
-    // collection = await api.posts
-    //   .browse({
-    //     include: "tags,authors",
-    //     limit: "all"
-    //   })
-    //   .catch(err => {
-    //     console.error(err);
-    //   });
-
-    // collection.forEach(post => {
-    //   post.url = stripDomain(post.url);
-    //   post.primary_author.url = stripDomain(post.primary_author.url);
-    //   post.tags.map(tag => (tag.url = stripDomain(tag.url)));
-
-    //   // Convert publish date into a Date object
-    //   post.published_at = new Date(post.published_at);
-    // });
-
-    // // Bring featured post to the top of the list
-    // collection.sort((post, nextPost) => nextPost.featured - post.featured);
-
-    // return collection;
-  });
-
-  // Get all dev logs
-  config.addCollection("dev-logs", async function (collection) {
-    collection = collection.getFilteredByGlob("src/dev-logs/*.md");
-    collection.forEach(post => {
-      post.primary_author = { ...author };
-      const numberOfWords = post.template.frontMatter.content.split(/\s/g).length;
-      post.data.reading_time = Math.ceil(numberOfWords / 200);
-      post.data.date_string = new Date(post.data.date).toDateString();
-      if (!post.data.feature_image) {
-        post.data.feature_image = "https://source.unsplash.com/random/800x200?sig=${Math.random()}"
-      } else {
-        post.data.feature_image = `${BASE_URL}/${post.data.feature_image}`
-      }
-    })
-    return collection;
   });
 
   // Get all authors
