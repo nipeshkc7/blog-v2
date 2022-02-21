@@ -15,7 +15,7 @@ module.exports = async function () {
     medium: "@arpankc",
     navigation: [
       { label: 'Home', url: '/' },
-      { label: 'Dev Logs', url: '/dev-logs/' },
+      //{ label: 'Dev Logs', url: '/dev-logs/' },
       { label: 'About', url: '/posts/welcome/' },
       {
         label: 'Newsletter',
