@@ -76,3 +76,5 @@ Not recommended, however, to open up permissions to everyone for a particular fi
     sudo chmod -R 777 directoryname
 
 Similarly, different codes can be used for specifying different variations of permissions.
+
+Thanks for reading. If you want to go more in-depth, check out [this great handbook for Linux SysOps](https://abarrak.gitbook.io/linux-sysops-handbook "https://abarrak.gitbook.io/linux-sysops-handbook").
