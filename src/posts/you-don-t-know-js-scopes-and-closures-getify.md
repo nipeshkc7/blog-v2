@@ -4,6 +4,7 @@ description: Notes from YDKJS.
 date: 2020-10-11T13:00:00.000+00:00
 tags:
 - bookclub
+- draft
 layout: layouts/post.njk
 feature_image: img/you-dont-know-js.png
 
