@@ -4,7 +4,7 @@ require("dotenv").config();
 module.exports = async function () {
   return {
     title: "Arpan's Blog",
-    description: 'Node.js, Cloud, Web and much more ...',
+    description: 'Javascript, Cloud, Rust and much more ...',
     logo: 'https://arpankc.com/img/download.png',
     icon: 'https://arpankc.com/img/icon.png',
     cover_image: 'https://static.ghost.org/v1.0.0/images/blog-cover.jpg',
@@ -15,11 +15,14 @@ module.exports = async function () {
     medium: "@arpankc",
     navigation: [
       { label: 'Home', url: '/' },
+      //{ label: 'Dev Logs', url: '/dev-logs/' },
       { label: 'About', url: '/posts/welcome/' },
       {
         label: 'Newsletter',
         url: 'https://newsletter.arpankc.com'
       },
+      //{ label: 'Author', url: '/author/ghost/' },
+      //{ label: 'Help', url: 'https://docs.ghost.org' }
     ],
     secondary_navigation: [],
     meta_title: null,
@@ -30,7 +33,7 @@ module.exports = async function () {
     twitter_image: null,
     twitter_title: null,
     twitter_description: null,
-    members_support_address: 'arpnkc@gmail.com',
+    members_support_address: 'noreply@eleventy.ghost.io',
     url: process.env.ELEVENTY_ENV === "prod" ? "https://blog.arpankc.com" : "http://localhost:8080",
     ghost_head: null,
     ghost_foot: null,
