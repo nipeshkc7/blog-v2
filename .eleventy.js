@@ -98,7 +98,7 @@ module.exports = function (config) {
   // Get all posts
   config.addCollection("posts", async function (collection) {
     collection = collection.getFilteredByGlob("src/posts/*.md").filter(post => {
-      return post.data && !post.data.tags.includes("blog");
+      return post.data && !post.data.tags.includes("draft");
     });
 
     collection.forEach(post => {
