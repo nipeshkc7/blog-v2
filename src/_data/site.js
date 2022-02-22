@@ -4,7 +4,7 @@ require("dotenv").config();
 module.exports = async function () {
   return {
     title: "Arpan's Blog",
-    description: 'Javascript, Cloud, Rust and much more ...',
+    description: 'Node.js, Cloud, Web and much more ...',
     logo: 'https://arpankc.com/img/download.png',
     icon: 'https://arpankc.com/img/icon.png',
     cover_image: 'https://static.ghost.org/v1.0.0/images/blog-cover.jpg',
@@ -15,14 +15,11 @@ module.exports = async function () {
     medium: "@arpankc",
     navigation: [
       { label: 'Home', url: '/' },
-      //{ label: 'Dev Logs', url: '/dev-logs/' },
       { label: 'About', url: '/posts/welcome/' },
       {
         label: 'Newsletter',
         url: 'https://newsletter.arpankc.com'
       },
-      //{ label: 'Author', url: '/author/ghost/' },
-      //{ label: 'Help', url: 'https://docs.ghost.org' }
     ],
     secondary_navigation: [],
     meta_title: null,
