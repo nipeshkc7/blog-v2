@@ -11,7 +11,7 @@ feature_image: ''
 ---
 # What is fetch?
 
-about fetch
+Fetch is a browser API that lets you send HTTP requests i.e. `fetch` resources from servers similar to the much older [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest") whose primary purpose was to allow access to resources without forcing a page to reload. 
 
 ## Brief History of fetch 
 
