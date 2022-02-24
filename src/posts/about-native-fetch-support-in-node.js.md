@@ -9,4 +9,14 @@ layout: layouts/post.njk
 feature_image: ''
 
 ---
-Draft piece
+# What is fetch?
+
+about fetch
+
+## Brief History of fetch 
+
+### WHATWG standard highlights
+
+### Current state in nodejs
+
+### How to use it?
