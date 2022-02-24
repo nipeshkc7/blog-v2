@@ -11,7 +11,7 @@ feature_image: ''
 ---
 # What is fetch?
 
-Fetch is a browser API that lets you send HTTP requests i.e. `fetch` resources from servers similar to the much older [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest") whose primary purpose was to allow access to resources without forcing a page to reload. 
+Fetch is a browser API that lets you send HTTP requests i.e. `fetch` resources from servers similar to the much older [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest") whose primary purpose was to allow access to resources without forcing a page to reload. Unlike its predecessor, fetch is promise based allowing you to use `async-await` and `.then()` whereas XMLHttpRequest primarily relied on callbacks.
 
 ## Brief History of fetch 
 
