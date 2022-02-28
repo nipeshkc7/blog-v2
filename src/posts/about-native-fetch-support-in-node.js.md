@@ -17,7 +17,7 @@ Fetch is a browser API that lets you send HTTP requests i.e. `fetch` resources f
 
 ### WHATWG standard highlights
 
-[WHATWG](https://whatwg.org/ "whatwg"), the community of people responsible for creating standards on HTML and related technologies have created a standard for `fetch` which is applied in all modern browsers.
+[WHATWG](https://whatwg.org/ "whatwg"), the community of people responsible for creating standards on HTML and related technologies have created a standard for `fetch` which is applied in all modern browsers. And this is the standard followed for moving fetch serverside. 
 
 ### Current state in nodejs
 
