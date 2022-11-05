@@ -148,7 +148,6 @@ Next, we'll create a file called `image.js` inside `/pages/api/image.js`. Any js
         apiKey: process.env.OPENAI_API_KEY,
     });
     
-    
     export default async function handler(req, res) {
        if (!req.body.prompt) return res.status(400).json({message: 'Pass in prompt field for image generation'});
         const openai = new OpenAIApi(configuration);
