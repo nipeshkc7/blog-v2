@@ -9,7 +9,7 @@ feature_image: "/img/dall-e-2022-11-05-21-59-15-ai-robot-creating-art.png"
 ---
 ## Introduction
 
-Starting November 3, DALL-E 2 API previously only accessible through their web interfaces. is now available in public beta. This means developers can now use the neural network in their own applications to create images from natural text. This post will cover the steps to create a full-stack application that can interface with the API and generate some cool images in our own web interface using the latest NextJS stack. The final app will look something like this:![](/img/recording-2022-11-05-at-21-54-45.gif)
+Starting November 3, the neural network DALL-E 2 previously only accessible through restricted web interfaces, is now available in a public beta. This means developers can now use the neural network in their own applications to create images from natural text. This post will cover the steps to create a full-stack application that can interface with the API and generate some cool photos in our own web interface using the latest NextJS stack. The final app will look something like this:![](/img/recording-2022-11-05-at-21-54-45.gif)
 
 ## What is DALL-E 2?
 
