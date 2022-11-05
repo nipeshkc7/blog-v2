@@ -4,12 +4,12 @@ description: Creating an AI Image Generator with DALL-E API and NextJS 13
 date: 2022-11-04T13:00:00Z
 tags: []
 layout: layouts/post.njk
-feature_image: ''
+feature_image: "/img/dall-e-2022-11-05-21-59-15-ai-robot-creating-art.png"
 
 ---
 ## Introduction
 
-Starting November 3, DALL-E 2 API previously only accessible through their web interfaces. is now available in public beta. This means developers can now use the neural network in their own applications to create images from natural text. This post will cover the steps to create a full-stack application that can interface with the API and generate some cool images in our own web interface using the latest NextJS stack.
+Starting November 3, DALL-E 2 API previously only accessible through their web interfaces. is now available in public beta. This means developers can now use the neural network in their own applications to create images from natural text. This post will cover the steps to create a full-stack application that can interface with the API and generate some cool images in our own web interface using the latest NextJS stack. The final app will look something like this:
 
 ## What is DALL-E 2?
 
