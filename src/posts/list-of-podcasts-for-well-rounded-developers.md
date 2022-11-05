@@ -27,9 +27,4 @@ Podcasts are the best things to happen to mankind since sliced bread. You can li
 * [Comedian v Economist](https://equitymates.com/show/comedian-v-economist/ "Comedian v Economist"): This podcast is a highly entertaining way of getting your weekly rundown of the macroeconomic landscape. Witty comedian Adam talks to his brother Thomas, the economist. And they talk about the current events in Australia and all around the world.
 * [Equity Mates Investing podcast](https://equitymates.com/show/equity-mates-investing-podcast/ "Equity Mates Investing Podcast"): Also part of the Equity Mates network, Equity Mates Investing was started in 2017, by Bryce and Ren who wanted to get started investing. They built this podcast with a mission to educate Millenials about investing. They talk to leading experts and CEOs which gives is a great way to learn about the financial aspects of big companies, tech or otherwise.
 * [Get Started Investing](): This one does a great job of catering towards beginners, as they delve into the basics and simplify the complicated stuff about investing.
-
-### Comedy (Bonus)
-
-* [Conan O'Brien Needs A Friend](https://teamcoco.com/podcasts "Conan O'Brien Needs a Friend"): Although comedy has nothing to do with being a Software Engineer, I had to put this one on here. One of the funniest people on the planet and American TV legend Conan O'Brien talks to a number of famous and non-famous guests with his friends Sona and Matt and every episode is hilarious.
-
-These are some of my favorite podcasts. Thanks for reading!
+* 
