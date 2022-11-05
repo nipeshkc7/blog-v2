@@ -78,10 +78,7 @@ In the `page.js` folder, we will add the following code:
 
     'use client';
     
-    import './globals.css';
-    import './robot.css';
     import { useState } from 'react';
-    
     
     export default function SearchPage() {
         const [prompt, setPrompt] = useState('');
@@ -163,8 +160,12 @@ Next, we'll create a file called `image.js` inside `/pages/api/image.js`. Any js
         res.status(200).json({ imageURL: response.data.data[0].url })
     }
 
-This is simply taking the prompt value from the API request and using the OpenAI SDK to generate the image and get its URL which we will pass back to the client.
+This is taking the prompt value from the API request and using the OpenAI SDK to generate the image and get its URL which we will pass back to the client. (Note that this will require an API key provided by OpenAI which is a simple endeavor, [https://openai.com/](https://openai.com/ "https://openai.com/"))
+
+Additionally, we have the option to add CSS to improve the layout of the project. This repository will have the complete CSS setup: [https://github.com/nipeshkc7/dalle-nexjs-app](https://github.com/nipeshkc7/dalle-nexjs-app "https://github.com/nipeshkc7/dalle-nexjs-app")
 
 ### Deploying to vercel
+
+Next, to deploy to vercel, we'll need to setup a github repository for the project. Then after signing up and  
 
 ### Concluding notes
