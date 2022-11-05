@@ -72,6 +72,100 @@ Now, to run the project simply type the command `npm run dev` which should start
 
 ### Code for Image Generation
 
+page.js will contain the main component of the code and `pages/api` folder will contain the API that is responsible for generating the images and returning back to the client. This is where the full stack capabilities of Next.js shine, being able to do both frontend and backend from the same folder without needing much configuration. 
+
+In the `page.js` folder, we will add the following code:
+
+    'use client';
+    
+    import './globals.css';
+    import './robot.css';
+    import { useState } from 'react';
+    
+    
+    export default function SearchPage() {
+        const [prompt, setPrompt] = useState('');
+        const [imageURL, setImageURL] = useState('');
+        const [loading, setLoading] = useState(0);
+    
+        const handleSubmit = async (event) => {
+            event.preventDefault()
+            setLoading(1);
+            const response = await fetch('/api/image', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    prompt
+                })
+            });
+            const imageResponse = await response.json();
+            // setImageURL(imageResponse.imageURL)
+            console.log(imageResponse);
+            setImageURL(imageResponse.imageURL);
+            setLoading(0);
+        }
+    
+        if (loading) {
+            return <Loading></Loading>
+        }
+    
+        if (imageURL !== '' && loading === 0) {
+            return (
+                <div className="imageContainer">
+                    <img src={imageURL}></img>
+                </div>
+            )
+        }
+    
+        return (
+            <div>
+                <div className="search-box">
+                    <form onSubmit={handleSubmit}>
+                        <button className="btn-search"><i className="fa fa-search"></i></button>
+                        <input type="text" id="prompt" name="prompt" className="input-search" onChange={(e) => setPrompt(e.target.value)} placeholder="Generate Image with AI ..."></input>
+                    </form>
+                </div>
+            </div>
+        )
+    }
+    
+    function Loading(){
+    	return <div>Loading...</div>
+    }
+
+We'll go through the main parts of the code:
+
+1. `use client` ensures that the component loads on the client instead of being server rendered. (Another neat feature that NextJS provides)
+2.  `handleSubmit` function is responsible for calling the API endpoint that we will create later on. This simply takes the form input with the name `prompt` and passes it along to the API.
+3. The response will then be displayed as an image tag in the React component.
+
+Next, we'll create a file called `image.js` inside `/pages/api/image.js`. Any js files inside the `api` folder will be treated as an API endpoint. Inside we create our endpoint with the code below:
+
+    import { Configuration, OpenAIApi } from "openai";
+    const configuration = new Configuration({
+        apiKey: process.env.OPENAI_API_KEY,
+    });
+    
+    
+    export default async function handler(req, res) {
+       if (!req.body.prompt) return res.status(400).json({message: 'Pass in prompt field for image generation'});
+        const openai = new OpenAIApi(configuration);
+        const response = await openai.createImage({
+            prompt: req.body.prompt,
+            n: 1,
+            size: "1024x1024",
+        });
+    
+        if (!response.data) throw new Error('Unable to get image');
+        console.log('received url ' + response.data.data[0].url);
+    
+        res.status(200).json({ imageURL: response.data.data[0].url })
+    }
+
+This is simply taking the prompt value from the API request and using the OpenAI SDK to generate the image and get its URL which we will pass back to the client.
+
 ### Deploying to vercel
 
 ### Concluding notes
