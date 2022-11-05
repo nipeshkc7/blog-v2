@@ -22,10 +22,7 @@ fields:
   label: feature_image
 pages:
 - src/dev-logs/Drafts/macos-automation-with-javascript.md
-- src/dev-logs/Drafts/macos-automation-with-javascript.md
 - src/dev-logs/Drafts/publishing-a-cli-tool-to-npm.md
-- src/dev-logs/Drafts/publishing-a-cli-tool-to-npm.md
-- src/dev-logs/Drafts/splitting-grocery-bills-with-telegram-bot-aws-and-node.js.md
 - src/dev-logs/Drafts/splitting-grocery-bills-with-telegram-bot-aws-and-node.js.md
 - src/posts/about-native-fetch-support-in-node.js.md
 - src/posts/list-of-podcasts-for-well-rounded-developers.md
